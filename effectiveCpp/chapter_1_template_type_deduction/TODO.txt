@@ -1,0 +1,8 @@
+To check definitions:
+- lvalue and rvalue references
+- std::array and its difference to built-in array
+- what is "constexpr" and "noexcept"? Example below:
+  template <typename T, std::size_t N>
+  constexpr std::size_t arraySize(T (&)[N]) noexcept
+- std::initializer_list
+- 
