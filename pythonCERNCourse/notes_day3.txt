@@ -1,0 +1,30 @@
+# import new features which will break backcompatibility
+from __future__ import <name>
+e.g. from __future__ import division
+this is not importing module... it's just the same syntax
+
+
+Exceptions:
+1) Messages from top of stack to anyone who cares lower down
+2) Alternative channel for data flow out of function (alternative to "function return")
+3) Branching Mechanism (same as "if", "while", "for")
+	if ..... else
+	while .. else
+	for .... else - all if these statements have "else" in python
+4) 
+
+
+"unwinding the stack"
+
+
+__xxx__ - is called special names (or "magic" names or "dunder"(double under) )
+
+creating an instance of class
+call order of special names:
+
+__new__( *args )
+__init__( <out_from_new>, *args )
+
+
+class namespace is dynamic
+

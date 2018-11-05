@@ -1,0 +1,9 @@
+name: cython-etc
+dependencies:
+- python>=3.6
+- cython
+- numba
+- jupyter
+- pytest
+- matplotlib
+- pandas

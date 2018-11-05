@@ -1,0 +1,3518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0056)https://jgcourses.gitlab.io/python-introduction/#slide65 -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__jgcourses_gitlab_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hands-On Introduction to Python Programming</title>
+<!-- metadata -->
+<meta name="generator" content="S5">
+<meta name="version" content="S5 1.1">
+<meta name="presdate" content="20061012">
+<meta name="author" content="Jacek Generowicz">
+<meta name="company" content="">
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow">
+<meta name="controlVis" content="hidden">
+<!-- style sheet links -->
+<link rel="stylesheet" href="./Hands-On Introduction to Python Programming_files/slides.css" type="text/css" media="screen" id="slideProj" disabled="">
+<link rel="stylesheet" href="./Hands-On Introduction to Python Programming_files/outline.css" type="text/css" media="screen" id="outlineStyle">
+<link rel="stylesheet" href="./Hands-On Introduction to Python Programming_files/print.css" type="text/css" media="print" id="slidePrint">
+<link rel="stylesheet" href="./Hands-On Introduction to Python Programming_files/opera.css" type="text/css" media="projection" id="operaFix">
+<!-- S5 JS -->
+<script src="./Hands-On Introduction to Python Programming_files/slides.js" type="text/javascript"></script>
+<style media="screen, projection" id="s5ss">body {font-size: 1em !important;}</style></head>
+<body data-gr-c-s-loaded="true">
+<div class="layout">
+<div id="controls"><form action="https://jgcourses.gitlab.io/python-introduction/#" id="controlForm" onmouseover="showHide(&#39;s&#39;);" onmouseout="showHide(&#39;h&#39;);"><div id="navLinks" class="hideme" style="visibility: hidden;"><a accesskey="t" id="toggle" href="javascript:toggle();">Ø</a><a accesskey="p" id="prev" href="javascript:go(-1);">«</a><a accesskey="n" id="next" href="javascript:go(1);">»</a><div id="navList"><select id="jumplist" onchange="go(&#39;j&#39;);"><option value="0">0 : Hands-On Introduction to Python Programming</option><option value="1">1 : </option><option value="2">2 : This course aims to give you</option><option value="3">3 : Learn by doing </option><option value="4">4 : Installing Python</option><option value="5">5 : Incremental Development</option><option value="6">6 : Introspection</option><option value="7">7 : Duck Typing</option><option value="8">8 : Docstrings</option><option value="9">9 : Multi-paradigm</option><option value="10">10 : Numerical types</option><option value="11">11 : Namespaces, Callables ...</option><option value="12">12 : Modules</option><option value="13">13 : Importing modules</option><option value="14">14 : Sequences</option><option value="15">15 : Lists</option><option value="16">16 : Tuples</option><option value="17">17 : What does += do?</option><option value="18">18 : Strings</option><option value="19">19 : Unpacking tuples</option><option value="20">20 : Indexing and slicing</option><option value="21">21 : Sequence operations</option><option value="22">22 : Variable, binding, call-by-value</option><option value="23">23 : Indentation</option><option value="24">24 : Indentation</option><option value="25">25 : Boolean contexts</option><option value="26">26 : Loops</option><option value="27">27 : Loops</option><option value="28">28 : Laziness (is a virtue)</option><option value="29">29 : Functions</option><option value="30">30 : Multiple return values</option><option value="31">31 : First class objects</option><option value="32">32 : Lexical Closures</option><option value="33">33 : Unqualified name search</option><option value="34">34 : Argument passing</option><option value="35">35 : Garbage collection</option><option value="36">36 : Type systems</option><option value="37">37 : Dictionaries</option><option value="38">38 : Dictionaries</option><option value="39">39 : File I/O</option><option value="40">40 : With statement and context managers</option><option value="41">41 : Sorting</option><option value="42">42 : lambda, Higher-order functions</option><option value="43">43 : Summing exercise</option><option value="44">44 : Division</option><option value="45">45 : Exceptions</option><option value="46">46 : Exceptions</option><option value="47">47 : Raising Exceptions</option><option value="48">48 : Exception semantics</option><option value="49">49 : Exception hierarchy</option><option value="50">50 : LBYL vs EAFP</option><option value="51">51 : IPython</option><option value="52">52 : Queue abstract type</option><option value="53">53 : A Python implementation of the queue abstract type</option><option value="54">54 : Classes</option><option value="55">55 : Queue class</option><option value="56">56 : Inheritance, operators</option><option value="57">57 : Specialized Queue</option><option value="58">58 : Overriding and extending</option><option value="59">59 : Privacy</option><option value="60">60 : Polymorphism Without Inheritance</option><option value="61">61 : User-defined exceptions</option><option value="62">62 : Making modules</option><option value="63">63 : Testing</option><option value="64">64 : The priority queue specification</option><option value="65">65 : List Comprehensions</option><option value="66">66 : Generator Expressions</option><option value="67">67 : Memoization</option><option value="68">68 : Memoizer</option><option value="69">69 : Name resolution</option><option value="70">70 : Speed</option><option value="71">71 : Generators</option><option value="72">72 : itertools</option><option value="73">73 : Pervasive laziness in Python 3</option><option value="74">74 : State changes</option><option value="75">75 : State Pattern</option><option value="76">76 : Attribute lookup</option><option value="77">77 : Binding Mechanisms</option><option value="78">78 : Binding Mechanisms </option><option value="79">79 : Type/Class Unification</option><option value="80">80 : Type/Class Unification</option><option value="81">81 : Say "No!" to getters and setters</option><option value="82">82 : Properties</option><option value="83">83 : Decorators</option><option value="84">84 : RAD</option><option value="85">85 : I hope that</option><option value="86">86 : Code samples</option></select></div></div></form></div>
+<div id="currentSlide" style="visibility: visible;"><span id="csHere">65</span> </div>
+<div id="header"></div>
+<div id="footer">
+<h1></h1>
+<h2>Hands-On Introduction to Python Programming</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide" id="slide0" style="visibility: visible;">
+<h1>Hands-On Introduction to Python Programming</h1>
+<h3><a href="mailto:Jacek.Generowicz@cern.ch">Jacek.Generowicz@cern.ch</a></h3>
+<h4></h4>
+</div>
+
+
+
+<div class="slide" id="slide1" style="visibility: visible;">
+  <h1></h1>
+  <p>
+    This is a combination of slides and notes. The slides provide
+    visual cues for the course. The notes provide further information
+    and explanation. Both should be viewable in standards compliant
+    web browsers. Printing should ignore the slides, and print the
+    notes.
+  </p>
+  <ul>
+    <li type="disc">Enable JavaScript in your browser.</li>
+    <li type="disc">Use <tt>t</tt> to toggle between slides and notes.</li>
+    <li type="disc">Arrow
+      keys, <tt>return</tt>, <tt>space</tt>, <tt>n</tt>, <tt>p</tt>, <tt>control
+	n</tt>, <tt>control p</tt> and mouse-click to move forward and
+      back through the slides.</li>
+    <li type="disc">page number followed by <tt>return</tt> to jump to that page.</li>
+    <li type="disc">Mouse over bottom-right corner for mouse-based
+      navigation.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide2" style="visibility: visible;">
+<h1>This course aims to give you</h1>
+<ul class="">
+<li type="disc" class="">the ability to write useful programs in Python</li>
+<li type="disc" class="">an appreciation of the advantages of a dynamic, introspective,
+  incremental environment for rapid program development</li>
+<li type="disc" class="">an appreciation of the 'batteries included' principle</li>
+<li type="disc" class="">a look at programming techniques you might not have seen before</li>
+<li type="disc" class="">to give you a deep understanding of fundamental
+  concepts on which Python rests</li>
+</ul>
+</div>
+
+
+
+<div class="slide" id="slide3" style="visibility: visible;">
+  <h1>Learn by doing </h1>
+  <p class="">That which we must learn to do, we learn by
+  doing.</p>
+  <p class="" align="right">Aristotle - <em>Nicomachean Ethics</em></p>
+  <ul class="">
+    <li class="">You'll DO lots</li>
+    <li class="">Try out almost anything that appares on the slides and looks
+    like source code (it will be in <tt>this font</tt>), in your
+    Python interpreter.
+    <ul class="">
+    <li class=""> <span class="markred">This is vital!</span></li>
+    </ul></li>
+    <li class="">Please, please, PLEASE <span class="markred"><b>DO</b> ask</span> me lots of <span class="markred">questions</span>.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide4" style="visibility: visible;">
+  <h1>Installing Python</h1>
+  <ul class="">
+    <li class=""><tt>conda</tt> is a tool which enables you to install and
+    manage multiple versions of Python and third-party packages,
+    without the need to have administration rights on your
+    machine.</li>
+    <li class="">Search the web for 'conda test drive'</li>
+    <li class="">Use conda to create an environment for use during this course</li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="slide" id="slide5" style="visibility: visible;">
+  <h1>Incremental Development</h1>
+  <ul class="">
+    <li class="">No lengthy edit-compile-debug cycle.
+      <div class="handout">If you are used to languages such as
+      Smalltalk or Lisp, this will be familiar to you. If your
+      experience is limited to languages such as C++, Java and
+      Fortan, you are will be used to a development style something
+      like the following.
+      <ol>
+	<li>Write the minimal boilerplate code necessary for the
+	language to do anything at all. For example
+	<tt>
+	#include &lt;iostream&gt;
+	int main(int argc, char*[] argv) {
+          return 0;
+        }
+	</tt>
+	</li>
+	<li>Write a bit of code that actually <b>does</b> something</li>
+	<li>Compile</li>
+	<li>Wait</li>
+	<li>Look at the compilation errors</li>
+	<li>Swear at the semicolon you forgot</li>
+	<li>Edit</li>
+	<li>Save</li>
+	<li>Compile</li>
+	<li>Wait</li>
+	<li>Look at the compilation errors</li>
+	<li>Try to figure out what you did wrong</li>
+	<li>Edit</li>
+	<li>Save</li>
+	<li>Go back to step 3</li>
+      </ol>
+      The time spent waiting for the compilation to finish, breaks your
+      concertation. <!-- FIXME find a reference to flow --> This
+      disruption is absent in Python development. 
+      </div>
+    </li>
+    <li class="">Make tiny changes and test them immediately.
+      <div class="handout">
+	Python's interactive nature allows you to test tiny fragments
+	of code, instantly, giving you immediate feedback on your
+	ideas. Less interactive languages strongly discourage seeking
+	such feedback: boilerplate code such as that shown above, in
+	combination with the edit compile cycle, make the cost of
+	trying tiny fragments of code, much more expensive than it is
+	in Python.
+      </div>
+    </li>
+    <li class="">Program state is not lost.
+      <div class="handout">
+	If you run your code interactively, a runtime error will drop
+	you into Python's interactive shell, where much of your data
+	will still be available to you for inspection. It may even be
+	possible to fix some buggy function, and resume the
+	computation successfully.
+      </div>
+    </li>
+    <li class="">This can reduce development time by an order of magnitude,
+    sometimes even more.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide6" style="visibility: visible;">
+  <h1>Introspection</h1>
+  <ul>
+    <li>A Python program can ask interesting questions about its
+      own state, and the objects it is manipulating:</li>
+    <li><tt>dir(), dir(1)</tt>
+      <p class="handout">
+	<tt>dir</tt> is a built-in function which returns a list of
+	all the names belonging to some namespace. If no arguments are
+	passed to <tt>dir</tt>, it inspects the namespace in which it
+	was called. If <tt>dir</tt> is given an argument, then it
+	inspects the namespace of the object which it was passed.
+	<br> You will find many names which both start and end with
+	a double underscore (e.g. <tt>__name__</tt>). These are
+	called <em>special</em> (colloquially also
+	called <em>magic</em>) names. Please ignore these for the time
+	being. They will be covered in due course, but for now just
+	imagine that they are not there.
+      </p>
+    </li>
+    <li>
+      <tt>help(dir) # [pydoc]</tt>
+      <p class="handout">Try <tt>help()</tt>!</p>
+      <p class="handout">
+	The UNIX command <tt>pydoc</tt> has access to essentially the
+	same information as Python's built-in
+	function <tt>help</tt>. <tt>help</tt>, however, does have
+	access to information about objects in the currently running
+	program, while <tt>pydoc</tt> can only access those objects
+	which are available by default.
+      </p>
+      <p class="handout"><tt>pydoc -p 8000</tt> will start a web
+	server on localhost:8000, through which you can browse the
+	documentation through a web interface.</p>
+    </li>
+    <li>
+      <tt>  type(1)</tt>
+    </li>
+    <li>
+      <tt>isinstance(...)</tt>
+      <p class="handout">
+	<tt>isinstance</tt> returns <tt>True</tt> if the given object
+	is an instance of the given type, or any of its
+	superclasses. Alternatively the typespec can be a tuple of
+	types. To get the full details about how <tt>isinstance</tt>
+	can be called, try using <tt>help</tt>.
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide7" style="visibility: visible;">
+  <h1>Duck Typing</h1>
+  <ul class="">
+    <li class="">
+      If it looks like a duck ...
+      </li>
+    <li class="">
+      ... and it quacks like a duck ...
+      </li>
+    <li class="">
+      ... then it's a duck !
+    </li>
+    <li class="">
+      What the object can do, is far more important that it's actual
+      type.
+    </li>
+    <li class="">
+      Checking types in Python is often the wrong thing to do.
+    </li>
+    <li class="">
+      Try to see whether on object can do what you want it to, rather
+      than checking its type.
+    </li>
+    <li class="">
+      You can't possibly know ALL the types that are able to do what
+      you want ...
+    </li>
+    <li class="">
+      ... some of them might not have been written yet!
+    </li>
+    <li class="">
+      Often, the simplest way to see whether an object can do what
+      you want, is to try to get it to do it.
+    </li>
+    <li class="">
+      I don't care who your parents are, as long as you can do the job.
+    </li>
+</ul></div>
+
+
+
+<div class="slide" id="slide8" style="visibility: visible;">
+  <h1>Docstrings</h1>
+  <ul class="">
+    <li class=""><tt>help(...)</tt> accesses the <em>documentation
+    strings</em> of objects</li>
+    <li class="">
+      Any literal string apparing as the first item in the definition
+      of a class, function, method or module, is taken to be its
+      docstring.
+      <div class="handout">
+	<tt>help</tt> includes the docstring in the information it
+	displays about the object. In addition to the docstring it may
+	display some other information, for example, in the case of
+	functions, it displays the function's signature.
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide9" style="visibility: visible;">
+  <h1>Multi-paradigm</h1>
+  <ul>
+    <li>Imperative</li>
+    <li>Object oriented</li>
+    <li>Functional</li>
+    <li>Mix-in</li>
+    <li>(Aspect oriented)</li>
+    <li>...</li>
+  </ul>
+  <div class="handout">While Python provides excellent support for
+  object-oriented programming, this does not mean that you should
+  write all Python programs in OO style. Pick the programming style
+  that is most appropriate to the problem you are solving.</div>
+</div>
+
+
+
+<div class="slide" id="slide10" style="visibility: visible;">
+  <h1>Numerical types</h1>
+  <ul class="">
+    <li class="">
+      <tt>int</tt> (C's long), <tt>float</tt> (C's double) - nothing exciting to say
+      <div class="handout">
+	<ul>
+	  <li>
+	    The Python interpreter we are using is implemented in
+	    C. Python's <tt>int</tt> is based on the underlying C
+	    implementation's <tt>int</tt> type, while
+	    Python's <tt>float</tt> is based on the underlying C
+	    implementation's <tt>double</tt>. There is only one precision
+	    of floating point number in Python.
+	  </li>
+	  <li>
+	    While the C-based implementation (sometimes known as
+	    <em>CPython</em>) is the "official" Python, other
+	    implementations do exist. An important one
+	    is <a href="http://www.jython.org/">Jython</a> which is
+	    implemented Java, and allows seamless import and use of
+	    any Java class.
+	  </li>
+	  <li>
+	    <a href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython">IronPython</a>
+	    is an implementation on top of .NET, allowing use of all
+	    .NET libraries.
+	  </li>
+	  <li>
+	    Another noteworthy Python implementation
+	    is <a href="http://codespeak.net/pypy/dist/pypy/doc/news.html">PyPy</a>,
+	    which implements Python in Python itself.
+	  </li>
+	</ul>
+      </div>
+    </li>
+    <li class="">
+      <tt>long</tt>
+      <div class="handout">
+	<ul>
+	  <li>
+	    Try a thought experiment: Imagine you have to
+	    calculate the factorial of 100. What problem will you
+	    face?
+	  </li>
+	  <li>	    
+	    Reminder: the factorial of an integer <tt>N</tt>
+	    (written <tt>N!</tt>) is the product of all integers
+	    from 1 through <tt>N</tt>. So <tt>4! = 1x2x3x4 = 24</tt>
+	  </li>
+	  <li>
+	    Factorials grow very quickly, and 100! is a <b>very</b>
+	    large number, so large that it cannot be represented by
+	    the integer type. You need some other data structure
+	    capable of representing bigger integers.
+	  </li>
+	  <li>
+	    This capability is provided in Python by
+	    the <tt>long</tt> type. It as an integer type
+	    of <b>unlimited</b> precision. The precision is
+	    limited only by the memory available to your program.
+	  </li>
+	</ul>
+      </div>
+      <ul class="">
+	<li type="none" class=""><!--FIXME get rid of the bullet-->
+	  <pre>import sys <small class="handout"> # (importing modules will be explained shortly) </small>
+a = sys.maxsize
+b = a + 1
+print(a, b)
+	  </pre>
+	</li>
+      </ul>
+    </li>
+    <li class="">complex: <tt>1 + 1j</tt></li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide11" style="visibility: visible;">
+  <h1>Namespaces, Callables ...</h1>
+  <div class="handout">
+    The <tt>complex</tt> type provides an excellent opportunity to
+    learn some important lessons about Python.
+  </div>
+  <ul class="">
+    <li class="">Use <tt>dir</tt> and <tt>help</tt> to find
+    some <em>interesting</em> attributes of <tt>complex</tt> numbers
+      <div class="handout">
+	Remember that I asked you to ignore magic names: those with
+	leading and trailing double underscores. So "interesting"
+	should be taken to mean, "not magic".
+    </div>
+    </li>
+    <li class="">
+      Check that Python's <tt>complex</tt> numbers behave the way you would
+      expect
+      <div class="handout">
+	<ul>
+	  <li>
+	    Just in case you are unfamiliar with complex numbers: A
+	    complex number consists of two component numbers known as
+	    the <em>real</em> and <em>imaginary</em> parts. Complex
+	    numbers are typically written as <tt>a + ib</tt>,
+	    where <tt>a</tt> is real component, and <tt>b</tt> is the
+	    imaginary component. The symbol <tt>i</tt> denotes
+	    the <em>imaginary</em> number: the square root of -1. A
+	    common operation performed on complex numbers is that
+	    of <em>conjugation</em> in which the sign of the imaginary
+	    part is reversed.
+	  </li>
+	  <li>
+	    Note that while the imaginary number is typically denoted by
+	    an <tt>i</tt> in mathematics and physics literature, the
+	    symbol <tt>j</tt> is preferred by electrical engineers. This
+	    is also the symbol used by Python.
+	  </li>
+	  <li>
+	    Note that while <tt>j</tt> and <tt>1 + j</tt> would be
+	    perfectly acceptable ways of writing a complex number in
+	    mathematical notation, Python would interpret these two
+	    expressions as "the value of the variable <tt>j</tt>" and
+	    "one plus the value of the variable <tt>j</tt>"
+	    respectively. In order to make Python understand that you
+	    are referring to the imaginary number, rather than the
+	    variable <tt>j</tt>, you must directly precede <tt>j</tt>
+	    with a coefficient, even if it is the mathematically
+	    superfluous coefficient 1.
+	  </li>
+	</ul>
+      </div>
+    </li>
+  </ul>
+  <div class="handout">
+    This little exercise is designed to teach some important lessons.
+    <ul>
+      <li>
+	<b>Namespaces</b> It is important to understand the
+	namespaces in which various names are
+	found. <tt>dir(complex)</tt> or <tt>dir(1j)</tt>
+	yields <tt>conjugate</tt>, <tt>imag</tt> and <tt>real</tt> as
+	the interesting attributes of complex numbers. A common
+	mistake at this point is to try to find the conjugate of a
+	complex number thus: <tt>conjugate(1+1j)</tt>. This produces
+	a <tt>NameError</tt> because the name <tt>conjugate</tt> is
+	not present in the global namespace, in which the
+	command was issued. The <tt>conjugate</tt> name resides in the
+	complex number class, and therefore must be accessed through
+	the class itself, or through instances of the class. The most
+	obvious correct way to calculate the conjugate is
+	probably <tt>(1+1j).conjugate()</tt>. Another obvious way of
+	achieving the same result would
+	be <tt>complex.conjugate(1+1j)</tt>. Other more indirect
+	methods exist.
+      </li>
+      <li>
+	<b>Functions must be called, if they are to do something.</b>
+	Often people try <tt>1j.conjugate</tt> and think that the
+	output that Python gives them is an error. It is not. What was
+	asked for was "the <tt>conjugate</tt> attribute of the
+	object <tt>1j</tt>". It so happens that that attribute is a
+	function (method). If you asked for it, you got it, and Python
+	told you that that is what you have. (Python's interactive
+	shell shows you the printed representation of the expressions
+	you evaluate in the shell. If your expression evaluates to a
+	function, the shell shows you the printed representation of a
+	function, which in this case looks something
+	like <tt>&lt;built-in method conjugate of complex object at
+	0x30d200&gt;</tt>.) In order to get the function (or any
+	other <em>callable</em>) to do any work, you must call it by
+	placing parentheses behind it. Those parentheses should
+	contain the arguments to the function. Even if the function
+	takes zero arguments, the parentheses are still required.
+      </li>
+      <li>
+	<b>Functions are data.</b> In languages such as C++ there is a
+	clear distinction between functions and data. At this point,
+	students are often tempted to ask "how can I tell which are
+	the functions, and which are the data?"
+	<ul>
+	  <li>
+	    They are all data. In Python, functions, just like any
+	    other data, are first class objects.
+	  </li>
+	  <li>
+	    Inspect the type of the attribute, by passing the
+	    attribute to <tt>type</tt>.
+	  </li>
+	</ul>
+      </li>
+      <li>
+	<b>It is perfectly normal <em>not</em> to call functions in
+	Python</b>, but to ask for the function itself, in order to
+	use it (or make it be used) at a different point. For example
+	you might store a function in the variable <tt>f</tt>, like
+	this:<tt>f = complex.conjugate</tt> and later use that stored
+	function like this: <tt>f(1+1j)</tt>. Such treatement of
+	functions as data is central to functional programming. It is
+	quite common for functions to take other functions as
+	arugments. Functions which take other functions as arguments
+	are called higher-order functions.
+      </li>
+      <li>
+	<small>
+	  (The astute student may have noticed that the implementation
+	  of complex numbers is not quite as simple as might be
+	  inferred from the above. <tt>imag</tt> and <tt>real</tt> are
+	  not implemented as pure data attributes, rather
+	  as <a href="http://docs.python.org/ref/descriptors.html">descriptors</a>,
+	  but these are far beyond the scope of this course, certainly
+	  at such an early stage. For the purposes of illustrating the
+	  points in the exercise, it is best to think of <tt>imag</tt>
+	  and <tt>real</tt> as pure data attributes.)
+	</small>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="slide" id="slide12" style="visibility: visible;">
+  <h1>Modules</h1>
+  <ul class="">
+    <li class="">Group together functionality</li>
+    <li class="">Provide namespaces</li>
+    <li class="">Means of extending Python</li>
+    <li class="">
+      Python's standard library contains a vast collection of
+      modules - "Batteries Included"
+      <div class="handout">
+	<ul>
+	  <li>
+	    Try <tt>help('modules')</tt>
+	  </li>
+	  <li>
+	    <tt>help</tt> is a function which gives information about
+	    the object which is passed as its argument. Most things in
+	    Python (classes, functions, modules, etc.) are objects,
+	    and therefore can be passed to <tt>help</tt>. There are,
+	    however, some things on which you might like to ask for
+	    help, which are not existing Python objects. In such
+	    cases it is often possible to pass a string contaning the
+	    name of the thing or concept to <tt>help</tt>.
+	    <ul>
+	      <li>
+		<tt>help('modules')</tt> will generate a list of all
+		modules which can be imported into the current
+		interpreter. Note that <tt>help(modules)</tt> (note
+		absence of quotes) will result in a <tt>NameError</tt>
+		(unless you are unlucky enough to have a variable
+		called <tt>modules</tt> floating around, in which case
+		you will get help on whatever that variable happens to
+		refer to.)
+	      </li>
+	      <li>
+		<tt>help('some_module')</tt>,
+		where <tt>some_module</tt> is a module which has not
+		been imported yet (and therefore isn't an object yet),
+		will give you that module's help information.
+	      </li>
+	      <li>
+		Keywords. For example <tt>and</tt>, <tt>if</tt>
+		or <tt>import</tt>. These are special words recognized
+		by Python: they are not objects and thus cannot be
+		passed as arguments to <tt>help</tt>. Passing the name
+		of the keyword as a string to <tt>help</tt> works, but
+		only if you
+		have <a href="http://docs.python.org/download.html">Python's
+		HTML documentation</a> installed, and the interpreter
+		has been made aware of its location by setting the
+		environment variable <tt>PYTHONDOCS</tt>.
+	      </li>
+	    </ul>
+	  </li>
+	</ul>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide13" style="visibility: visible;">
+  <h1>Importing modules</h1>
+  <ul class="">
+    <li class="">
+      <tt>import math</tt>
+      <div class="handout">
+	This will introduce the name <tt>math</tt> into the namespace
+	in which the <tt>import</tt> command was issued. The names
+	within the <tt>math</tt> module will <b>not</b> appear in the
+	enclosing namespace: they must be accessed through the
+	name <tt>math</tt>. For example: <tt>math.sin</tt>.
+      </div>
+    </li>
+    <li class="">
+      <tt>import math, cmath</tt>
+      <div class="handout">More than one module can be imported in the
+      same statement.</div>
+    </li>
+    <li class="">
+      <tt>import math as calc</tt>
+      <div class="handout">
+	The name by which the module is known locally can be different
+	from its "official" name. Typical uses of this are
+	<ul>
+	  <li>
+	    To avoid name clashes with existing names
+	  </li>
+	  <li>
+	    To change the name to something more manageable. For
+	    example <tt>import SimpleHTTPServer as shs</tt>. I would
+	    discourage this for production code (as longer meaningful
+	    names make programs far more understandable than short
+	    cryptic ones), but for interactively testing out ideas,
+	    being able to use a short synonym can make your life much
+	    easier. Given that (imported) modules are first class
+	    objects, you can, of course, simply do <tt>shs =
+	    SimpleHTTPServer</tt> in order to obtain the more easily
+	    typable handle on the module.
+	  </li>
+	</ul>
+      </div>
+    </li>
+    <li class="">
+      <tt>from math import sin</tt>
+      <div class="handout">
+	This will import the module <tt>math</tt>, but it will not
+	introduce the name <tt>math</tt> into the current
+	namespace. It will only introduce the name <tt>sin</tt> into
+	the current namespace. It is possible to pull in more than
+	one name from the module in one go: <tt>from math import sin, cos</tt>.
+      </div>
+    </li>
+    <li class="">
+      <tt>from math import *</tt>
+      <div class="handout">
+	Once again, this does not introduce the name <tt>math</tt>
+	into the current namespace. It does however introduce all
+	public names of the math module into the current
+	namespace. Broadly speaking, it is a bad idea to do this:
+	<ul>
+	  <li>Lots of new names will be dumped into the current namespace.</li>
+	  <li>Are you sure they will not clobber any names already
+	  present?</li>
+	  <li>It will be very difficult to trace where these names
+	  came from</li>
+	  <li>Having said that, some modules (including ones in the
+	    standard library, recommend that they be imported in this way). </li>
+	</ul>
+	Use with caution!
+      </div>
+    </li>
+  </ul>
+  <p>Don't forget to try <tt>dir(...)</tt> and <tt>help(...)</tt></p>
+  <div class="handout">
+    <ul>
+      <li>
+	The above list is not exhaustive. For example <tt>from math
+	  import sin as cos</tt>.
+      </li>
+      <li>
+	I haven't touched on <a href="http://docs.python.org/tut/node8.html#SECTION008400000000000000000">packages</a>.
+      </li>
+      <li>
+	The <tt>import</tt> statement
+	underwent <a href="http://docs.python.org/dev/whatsnew/pep-328.html">enhancements</a>
+	in Python 2.4 and 2.5.
+      </li>
+      <li>
+	Python tries to avoid importing the same module twice: It
+	maintains a list of all imported modules which <tt>import</tt>
+	checks before importing a module. Therefore, if you are
+	developing some code interactively, and you make changes to
+	some module you are writing and <tt>import</tt> the module
+	again from some code you are running interactively, the
+	changes in the module will not become available to you, as
+	Python would have recognized that this module is already
+	loaded and will not have bothered to do it again. In such
+	situations, you should use the <tt>reload</tt> function (or
+	remove the module's name from <tt>sys.modules</tt>).
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="slide" id="slide14" style="visibility: visible;">
+  <h1>Sequences</h1>
+  <ul class="">
+    <li class="">List - mutable, heterogeneous</li>
+    <li class="">Tuple - immutable, heterogeneous</li>
+    <li class="">String - immutable, homogeneous</li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide15" style="visibility: visible;">
+  <h1>Lists</h1>
+  <ul>
+    <li><tt>[]</tt> <span class="markgrey">- the empty list</span></li>
+    <li><tt>[6]</tt> <span class="markgrey">- a 1-element list</span></li>
+    <li><tt>[5, 1+2j, 'hello']</tt> <span class="markgrey">- a 3-element list</span></li>
+    <li><tt>[[1,2],[3,4],[5,6]]</tt> <span class="markgrey">- a list of lists</span></li>
+    <li class="">
+      WRT other languages, resembles vector or array more than list
+      <div class="handout">
+	In computer science, the name "list" typically refers
+	to <em>linked lists</em>: chains of objects where each link in
+	the chain contains a datum and a reference to the next
+	link. Python's lists, however, are objects in which the
+	elements occupy contiguous locations in memory: the next
+	object in the list is not found by following a reference, but
+	by looking at the next location in memory. This type of data
+	structure is usually referred to as an <em>array</em>
+	or <em>vector</em>. It is important to be aware of this
+	difference, as the algorithmic complexity of various
+	operations on the object changes significantly depending on
+	the implementation used.
+	<table align="center" border="1">
+	  <tbody><tr>
+	    <td></td>
+	    <th>Linked lists</th>
+	    <th>Vectors (Python lists)</th>
+	  </tr>
+	  <tr>
+	    <th>Random access</th>
+	    <td align="center">O(n)</td>
+	    <td align="center">O(1)</td>
+	  </tr>
+	  <tr>
+	    <th>Extension</th>
+	    <td align="center">O(1)</td>
+	    <td align="center">O(n)</td>
+	  </tr>
+	</tbody></table>
+	Sometimes vector implementations buy a reduction in the
+	<em>average</em> algorithmic time complexity of extension by
+	sacrificing some memory. Python's lists (which are really
+	vectors) implement such an optimization and therefore
+	extending Python lists, <em>on average</em>, is independent of
+	the length of the list, or O(1). Such accounting over an
+	increased amount of time is called <em>amortization</em>,
+	therefore Python's list extensions are sometimes described as
+	taking <em> amortized constant time</em>.
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide16" style="visibility: visible;">
+  <h1>Tuples</h1>
+  <ul>
+    <li><tt>()</tt> <span class="markgrey">- the empty tuple</span></li>
+    <li>
+      <tt>(1,)</tt> <span class="markgrey">- a 1-element tuple</span>
+      <ul>
+	<li class="">
+	  Note the comma: without it, this would evaluate to the
+	  integer 1 !
+	  <div class="handout">
+	    Compare <tt>(1)</tt> and <tt>(1,)</tt>.
+	    Both Python lists and tuples may be written with a
+	    supefluous comma following the last element. It is only in
+	    the case of the single-element tuple that such a trailing
+	    comma is necessary, in order to ensure that Python
+	    understands the expression to be a tuple, rather than a
+	    parenthesized value.
+	  </div>
+	</li>
+      </ul>
+    </li>
+    <li><tt>(1, 'hello', [1,2])</tt> <span class="markgrey">- a 3-element tuple</span></li>
+    <li class="">
+      The parentheses are not always required: <tt>a = 1,2,3</tt>
+    </li>
+    <li class="">
+      Tuples are <b>IMMUTABLE</b>
+      <div class="handout">
+	This means that once a tuple is created, it cannot be
+	modified. Its value cannot change: it will continue to have
+	exactly the same value (contents, structure) until the moment
+	it is destroyed. Try <tt>t = (1,2,3); t[0] =
+	9</tt>. <small>(The alert student may have found a way of
+	mutating a tuple. Shhhh ... don't tell the others for
+	now.)</small> Compare the <em>interesting</em> attributes of
+	lists to those of tuples. What do you notice? Why?
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide17" style="visibility: visible;">
+  <h1>What does <tt>+=</tt> do?</h1>
+  <p class="">
+    <tt>l1 = [1, 2, 3]</tt><br>
+    <tt>l2 = l1</tt><br>
+    <tt>l2 == l1, l2 is l1</tt>
+    <span class="handout"> #  Both names refer to the same
+      object.</span><br>
+    <tt>l2 += [4, 5]</tt><br>
+    <tt>l1, l2</tt><br>
+    <tt>l1 == l2, l2 is l1</tt>
+    <span class="handout"> #  Mutations of the object are visible through
+      both names.</span><br>
+  </p>
+  <p class="">
+    <tt>t1 = (1, 2, 3)</tt><br>
+    <tt>t2 = t1</tt><br>
+    <tt>t2 == t1, t2 is t1</tt>
+    <span class="handout"> #  Again, both names refer to the same
+      object.</span><br>
+    <tt>t2 += (4, 5)</tt>
+    <span class="handout"> #  But tuples are immutable. The original
+      object cannot be modified, so a new object is created and bound
+      to <tt>t2</tt>. The original remains unaltered.</span><br>
+    <tt>t1, t2</tt><br>
+    <tt>t1 == t2, t2 is t1</tt>
+    <span class="handout"> #  <tt>t1</tt> continues to refer to the
+      original object.</span><br>
+  </p>
+  <p class="">
+    <tt>i1 = 0</tt><br>
+    <tt>i2 = i1</tt><br>
+    <tt>i2 == i1, i2 is i1</tt>
+    <span class="handout"> #  Again, only one object ...</span><br>
+    <tt>i2 += 1</tt>
+    <span class="handout"> #  ... which is immutable, so a new one is
+      created and bound to <tt>i2, </tt>.</span><br>
+    <tt>i1, i2</tt><br>
+    <tt>i1 == i2, i2 is i1</tt>
+    <span class="handout"> # <tt>i1</tt> continues to refer to the original
+    object.</span><br>
+  </p>
+</div>
+
+
+
+<div class="slide" id="slide18" style="visibility: visible;">
+  <h1>Strings</h1>
+  <ul>
+    <li><tt>'A string'</tt></li>
+    <li><tt>"Another string"</tt></li>
+    <li><tt>"A string with a ' in the middle"</tt></li>
+    <li><tt>'A string with a \' in the middle'</tt></li>
+    <li><tt>"""A multi-line<br>string"""</tt></li>
+    <li class=""><tt>Strings are <b>IMMUTABLE</b></tt></li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide19" style="visibility: visible;">
+  <h1>Unpacking tuples</h1>
+  <ul>
+    <li><tt>a,b,c = 1,2,3</tt></li>
+    <li>
+      <tt>a,b = b,a</tt>
+      <div class="handout">
+	Note that the assignments occur <em>logically</em> in
+	parallel. Without parellel assignment, you would need a third
+	temporary variable in order to swap the values of two
+	variables. Parallel assignment allows you to do it in a single
+	line with no extra variables, as above.
+      </div>
+    </li>
+    <li><tt>w = 5,6,7</tt></li>
+    <li><tt>x,y,z = w</tt></li>
+    <li class="">
+      Return multiple values from functions using tuples: output
+      parameters are un-pythonic
+      <div class="handout">
+	You may have experience in lanugages in which it is common
+	practice to make use of <em>output parameters</em>, in cases
+	where a function should be returning more than one value. This
+	practice involves passing pointers or references into a
+	function, and looking for the result at the end of such
+	pointers, once the function has finished running.
+	<ul>
+	  <li> 
+	    This requires the caller to prepare the locations where
+	    the results will appear beforehand (even for those outputs
+	    which he wishes to ignore)
+	  </li>
+	  <li>
+	    It is often not obvious which arguments are inputs, and
+	    which are outputs of the function.
+	  </li>
+	</ul>
+	It is possible to implement something like output parameters
+	in Python, but you should avoid doing so. Pass inputs in as
+	arguments; return all outputs in an (implicit)
+	tuple. For example: <tt>return width, height, length</tt>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide20" style="visibility: visible;">
+  <h1>Indexing and slicing</h1>
+  <ul>
+    <li>
+      <tt>a = list(range(10))</tt>
+      <div class="handout">
+	I trust that you tried <tt>help(range)</tt> without
+	prompting. Get used to using <tt>help</tt> and <tt>dir</tt>.
+      </div>
+    </li>
+    <li>
+      <tt>a[3]</tt>
+      <div class="handout">
+	Indexing is zero-based.
+      </div>
+    </li>
+    <li>
+      <tt>a[-3]</tt>
+      <div class="handout">
+	Negative indices are an offset from the <b>end</b> of the sequence.
+      </div>
+    </li>
+    <li>
+      <tt>a[3:6]</tt>
+      <div class="handout">
+	This is known as a slice. Note that the lower limit is
+	inclusive, while the upper limit it exclusive.
+      </div>
+    </li>
+    <li><tt>a[3:-3]</tt></li>
+    <li>
+      <tt>a[6:3]</tt>
+      <div class="handout">
+	Yes, it's empty: you reached the end before you started!
+      </div>
+    </li>
+    <li>
+      <tt>a[:6]</tt>
+      <div class="handout">
+	Leaving out a limit means "go as far as you can in that direction".
+      </div>
+    </li>
+    <li>
+      <tt>a[0:6:2]</tt>
+      <div class="handout">
+	A third number gives the step size. It can be negative.
+	<br>
+	<small>The step-size argument was implemented for the built-in
+	sequences only in Python 2.3, even though the third argument
+	was available for use in user-defined types much
+	earlier.</small>
+      </div>
+    </li>
+    <li><tt>len(a)</tt></li>
+    <li><tt>a[2:4] = ['x']</tt></li>
+    <li><tt>a[-1:] = 'abc'</tt></li>
+  </ul>
+  <div class="handout">
+    Slicing works for all bult-in sequences and can be implemented in
+    user-defined types too.
+  </div>
+</div>
+
+
+
+<div class="slide" id="slide21" style="visibility: visible;">
+  <h1>Sequence operations</h1>
+  <ul>
+    <li><tt>a = list(range(4))</tt></li>
+    <li><tt>a + [9,8,7]</tt></li>
+    <li><tt>a * 4</tt></li>
+    <li><tt>b =
+	[[0]*4]*4</tt><span class=""><span class="markred">&nbsp;&nbsp;&nbsp;Common
+	  pitfall</span></span>
+      <div class="handout">The inner list is a list of four
+      elements. Each element is (a reference to) the
+      number <tt>0</tt>. The outer list is also a list of four
+      elements. Each of those elements is (a reference to) the same
+      single inner list ...</div>
+    </li>
+    <li><tt>b</tt></li>
+    <li><tt>b[0][0] = 1</tt>
+      <div class="handout">... This assignement rebinds the first
+      element of the first inner list. This element therefore no
+      longer refers to the number <tt>0</tt>, but to the
+      number <tt>1</tt>. However, because the outer list
+      contains <b>four</b> references to the inner one, this change
+      is reflected in all four elements of the outer list.</div>
+    </li>
+    <li><tt>b</tt></li>
+    <li><tt>3 in a; 3 not in a</tt></li>
+    <li><tt>a += [9]</tt></li>
+    <li><tt>a.append(7)</tt></li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide22" style="visibility: visible;">
+  <h1>Variable, binding, call-by-value</h1>
+  <ul class="">
+    <li class="">
+      Variables do not have types; objects have type - dynamic typing
+      <div class="handout">
+	In <em>statically typed</em> languages, types are associated
+	with variables. The association of some data with a variable
+	determines the type of the data. In dynamically typed
+	languages, the objects themselves carry arround their type
+	information. Variables are associated with types only
+	incidentally.
+	<br>
+	Consider the following example in C++:
+	<pre>	  int i;
+	  i = 3;
+	  i = std::vector&lt;float&gt;(); 
+	</pre>
+	<ul>
+	  <li>
+	    First you inform the compiler that the variable <tt>i</tt>
+	    is to hold an integer.
+	  </li>
+	  <li>
+	    You assign an integer to <tt>i</tt>. That's fine.
+	  </li>
+	  <li>
+	    Then you attempt to stick something of a completely different type
+	    into <tt>i</tt>: the compiler complains.
+	  </li>
+	</ul>
+
+	Contrast this to something similar in Python:
+	<pre>	  i = 3 
+	  i = "hello"
+	</pre>
+	<ul>
+	  <li>
+	    There is no need to declare any variable.
+	  </li>
+	  <li>
+	    First you bind the name i to the value 3. The
+	    name <tt>i</tt> neither knows nor cares about the type of the
+	    object to which it refers; the object itself knows that it is
+	    of type <tt>int</tt>.
+	  </li>
+	  <li>
+	    Then you rebind <tt>i</tt> to an object with a different
+	    type. The name still doesn't care about the type of object
+	    it refers to; the new object knows that its type
+	    is <tt>str</tt>.
+	  </li>
+	</ul>
+      </div>
+    </li>
+    <li class=""><em>binding</em> is the association of a variable (more
+      generally, a location) to an object</li>
+    <li class="">Python uses call-by-value semantics ...</li>
+    <li class="">
+      ... but all values are references
+      <div class="handout">
+	Consequently, it is easy to be fooled into believing that
+	Python uses call-by-reference semantics. For example:
+	<br>
+	<pre>	  def foo(a):
+              a.append(6)
+
+          x = range(3)
+          foo(x)
+          print(x)   # =&gt;  [0, 1, 2, 6]
+	</pre>
+	However, if it <em>really</em> were call-by-reference
+	semantics then the following code
+	<pre>          def bar(a):
+              a = [5]
+
+          x = range(3)
+          bar(x)
+          print(x)   # =&gt;  [0, 1, 2]
+	</pre>
+	would yield <tt>[5]</tt>.
+      </div>
+    </li>
+    <li class="">
+      Parameter binding uses exactly the same mechanism as variable
+      assignment. <div class="handout"> If you understand one, then
+      you immediately understand the other.</div>
+    </li>
+  </ul>
+</div>
+
+<div class="slide" id="slide23" style="visibility: visible;">
+  <h1>Indentation</h1>
+  <ul class="">
+    <li class="">Python uses indentation to delimit blocks</li>
+    <li class="">
+      <pre>if True<span class="markblue">:</span>
+    print('this')
+    print('that')
+else<span class="markblue">:</span>
+    print('the other')
+      </pre>
+      <div class="handout">
+	<p>
+	  Now that we are starting to write snippets of code which are
+	  more than one line long, it is time to find a more efficient
+	  way of working interactively with Python. The tool I will be
+	  using to demonstrate this is Emacs, as it enables good
+	  interaction with Python, is widely available and probably
+	  familiar to many of you. I apologise to anyone who has
+	  religious objections or allergy to Emacs.
+	</p>
+	<ul>
+	  <li>Fire up Emacs</li>
+	  <li>
+	    Open a file whose name ends in <tt>.py</tt> (either by
+	    clicking on "Open File" in the "File" menu, or by
+	    issuing the keystrokes <tt>C-x C-f</tt>)
+	    <ul>
+	      <li>
+		<small>
+		  In Emacs convention <tt>C-x</tt> means "control-x"
+		  or "hold down the <tt>control</tt> key while pressing
+		  the <tt>x</tt> key". Similarly <tt>M-x</tt> means
+		  "meta-x". The <tt>meta</tt> key is usually
+		  labelled <tt>Alt</tt> on your keyboard. An alternative
+		  way of issuing <tt>M-x</tt> is to press <tt>Escape</tt>
+		  and release it before pressing <tt>x</tt>.
+		</small>
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    At this point you will be prompted for the filename in the
+	    minibuffer. The minibuffer is the line at the bottom of
+	    the Emacs frame. Type something like <tt>foo.py</tt>
+	    (anything ending in <tt>.py</tt> will do) and
+	    press <tt>RETURN</tt>.
+	  </li>
+	  <li>
+	    At this point you should see the word "Python" appear in
+	    the modeline, confirming that Emacs has guessed (from
+	    the <tt>.py</tt> filename extension) that you are
+	    intending to work on a Python program. <small>(The
+	    modeline is the line at the bottom of every Emacs window,
+	    which gives some information about what is going on in
+	    that window.)</small> If "Python" does not appear, then
+	    your Emacs does not have Python mode installed, or it is
+	    incorrectly configured.
+	  </li>
+	  <li>
+	    When the active buffer is in Python mode, you should
+	    notice that two menus containing the word "Python" appear
+	    in the menu bar.
+	  </li>
+	  <li>
+	    Click on the menu named "Python" and select the item
+	    "Start interpreter".
+	    <ul>
+	      <li>
+		There is on alternative python mode, which has
+		somewhat different behaviour, and completely different
+		keybindings. If you have this alternative mode
+		(e.g. if you are running GNU Emacs 22 or newer, or
+		something built on top of it, such as AquaMacs), then
+		the keybindings mentioned below will not match those
+		available to you. Just look at the keybindings shown
+		in the (single) Python menu.
+	      </li>
+	      <li>
+		One problem with this other python mode is that it
+		creates an <tt>emacs</tt> namespace into which it
+		places names that it creates, thus making interactive
+		programming more difficult. I have written a simple
+		workaround for this, which you can
+		find <a href="https://jgcourses.gitlab.io/python-introduction/src/python-mode-hack.el">here</a>. Simply add
+		this code to your Emacs startup file, or evaluate it
+		interactively.
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    At this point, your Emacs frame should split into two
+	    windows: one containing the buffer you were previously
+	    viewing; the other containing a running interactive Python
+	    shell.
+	  </li>
+	  <li>
+	    Note that the "Start interpreter" item in the "Python"
+	    menu also shows the characters <tt>C-c !</tt>. This is the
+	    keyboard command for starting the interpreter. This means
+	    that you could have started the interpreter by
+	    pressing <tt>Control-C</tt> followed by <tt>!</tt>.
+	  </li>
+	  <li>You should also find "Evaluate buffer" in the menu,
+	    bound to <tt>C-c C-c</tt>. This will execute the entire
+	    contents of the active buffer. Note that if you have not
+	    saved the buffer, the contents may differ from the file's
+	    contents as stored on disk.</li>
+	  <li><b>A very useful feature is "Evaluate region", bound
+	    to <tt>C-c |</tt>. This allows you to highlight some
+	    portion of the buffer, and execute just that portion. You
+	    should make plenty of use of this feature for testing out
+	    small framents of code, or updating functions you have
+	    debugged and fixed, etc.</b></li>
+	  <li>You can navigate the history of commands you issued in
+	    the Python interpreter running within Emacs
+	    with <tt>M-p</tt>, <tt>M-n</tt> (<tt>p</tt> for
+	    previous, <tt>n</tt> for next).</li>
+	  <li>Alternatively use the cursor keys to move to some
+	    previous input line (showing the
+	    prompt <tt>&gt;&gt;&gt;</tt>) and
+	    press <tt>RETURN</tt>. That input will then be copied to
+	    the current input line. You now have an opportunity to
+	    edit it. Pressing <tt>RETURN</tt> again, will execute the
+	    input.</li>
+	</ul>
+      </div>
+    </li>
+    <li class="">Note that blocks start with <span class="markblue">colons</span></li>
+    <li class="">
+      <tt>pass</tt> - the empty block
+      <div class="handout">
+	The situation may arise, in which you need to write an empty
+	block: a block containing no code. In such situations you
+	should use the keyword <tt>pass</tt> which is a statement that
+	does nothing.
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide24" style="visibility: visible;">
+  <h1>Indentation</h1>
+  <ul class="">
+    <li class="">Indentation is the <b>only</b> block delimitation mechanism
+      <p class="handout">
+	There are no <tt>begin</tt>s/<tt>end</tt>s, no <tt>{
+	... }</tt> or anything else: just indentation. Some people,
+	when initially confronted with this fact have quite a negative
+	reaction. With time, however, most of those who try working in
+	Python, come to appreciate this feature. Some of the
+	advantages it offers are:
+	</p><ul class="handout">
+	  <li>
+	    Gets rid of the visual clutter caused by the presence of
+	    block delimiters, making the code easier to read.
+	  </li>
+	  <li>
+	    Avoids wasting lines on block delimitation tokens, thus
+	    making the code shorter, which makes more code fit on the
+	    screen, which makes it easier to program.
+	  </li>
+	  <li>
+	    Ensures that the block structure perceived by the compiler
+	    is the same as that perceived by the human. Here are some
+	    examples (in C) where, more often than not, the human
+	    reader will parse the code differently form the compiler:
+	    <pre>	    if (...) 
+	    {
+	        do_this();
+            do_that();
+            }
+	    
+	    if (...)
+	        do_this();
+	        do_that();
+	    
+	    if (...)
+	        if (...)
+	            do_something();
+	    else
+	        surprise();
+	    </pre>
+	    In Python, such mistakes don't occur.
+	  </li>
+	</ul>
+      <p></p>
+    </li>
+    <li class="">
+      Indentation is ignored inside brackets
+      <pre class="handout">	  a = [1,
+          2,
+	    3      ,
+	       4
+            , 5] 
+      </pre>
+      and on continued lines
+      <pre class="handout">          b = 1 + \
+          2 +\
+                     3 +\
+              4
+      </pre>
+    </li>
+    <li class="">You can use tabs or spaces: just don't mix the two as that is
+      likely to make things go wrong.
+      <p class="handout">
+	The Python command line interpreter has two options for
+	invoking the detection of mixed tabs and spaces: <tt>-t</tt>
+	and <tt>-tt</tt>. The former issues warnings about mixed tabs
+	and spaces, the latter promotes such warnings to errors.
+      </p>
+    </li>
+    <li class="">You can use whatever number of tabs or spaces you like, as
+      long as the number is the same within a single block.</li>
+    <li class="">Use your editor's support for indenting Python.
+      <p class="handout">
+	In Emacs you can use the <tt>TAB</tt> and <tt>Backspace</tt>
+	keys to jump between various levels of indentation that Emacs
+	thinks are possible at this point. Emacs inserts spaces for
+	indentation. By default, it inserts four spaces, though you
+	can configure it to whatever you like.
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide25" style="visibility: visible;">
+  <h1>Boolean contexts</h1>
+  <ul class="">
+    <li class="">False
+      <ul class="">
+	<li class="">
+	  Numbers equal to zero
+	  <div class="handout">
+	    <tt>0, 0.0, 0j, 0l</tt>
+	  </div>
+	</li>
+	<li class="">
+	  Empty sequences and dictionaries
+	  <div class="handout">
+	    <tt>[], (), '', {}</tt>
+	  </div>
+	</li>
+	<li class="">
+	  <tt>None</tt>
+	  <div class="handout">
+	    an object denoting the absence of an object
+	  </div>
+	</li>
+	<li class="">
+	  <tt>False</tt>
+	  <div class="handout">
+	    <tt>True</tt> and <tt>False</tt> appeared in Python 2.1.1,
+	    where they were names bound to the integers 1 and 0,
+	    respectively. In Python 2.2 a separate <tt>bool</tt> type
+	    was introduced.
+	  </div>
+	</li>
+      </ul>
+    </li>
+    <li class="">True
+      <ul class="">
+	<li class="">Just about everything else</li>
+	<li class=""><tt>True</tt></li>
+      </ul>
+    </li>
+    <li class="">User defined types can determine their own interpretation in
+      boolean contexts.</li>
+</ul></div>
+
+
+
+<div class="slide" id="slide26" style="visibility: visible;">
+  <h1>Loops</h1>
+  <ul class="">
+    <li class=""><pre>epsilon = 1.0
+while 1 + epsilon &gt; 1:
+    epsilon /= 2
+    print(epsilon)
+	</pre>
+    </li><li class="">
+      <pre>for c in 'hello':
+    print(c)
+</pre>
+      <p class="handout">
+	For loops in many other languages update some number on each
+	iteration, which is then, typically, used only as an index
+	into a sequence: the number itself is often not interesting,
+	it is merely used to implement sequence iteration. In Python,
+	this iteration over sequences is emphasized in for loops. There
+	are, however, situations in which you are genuinely interested
+	in the for loop generating such numbers. The built-in
+	functions <tt>range</tt> and <tt>xrange</tt> can be used for
+	this purpose. A related utility, <tt>enumerate</tt>, was
+	introduced in Python 2.3.
+      </p>
+    </li>
+    <li class="">for-loops work with any iterable</li>
+    <li class=""><tt>help(enumerate)</tt></li>
+    <li class="">
+      <pre>for index, item in enumerate('my data'):
+    print(item, 'was in position', index)
+      </pre>
+    </li>
+    </ul>
+</div>
+
+
+
+<div class="slide" id="slide27" style="visibility: visible;">
+  <h1>Loops</h1>
+  <ul class="">
+    <li class="">
+      <tt>break</tt>
+      <p class="handout">
+	immediately terminates the enclosing loop
+      </p>
+    </li>
+    <li class="">
+      <tt>continue</tt>
+      <p class="handout">
+	skips the rest of the current iteration and proceeds
+	immediately with the next iteration
+      </p>
+    </li>
+    <li class="">
+      <tt>else</tt>
+      <p>
+	Both <tt>while</tt> and <tt>for</tt> loops have an
+	optional <tt>else</tt> clause, the body of which is executed
+	only if the loop runs to completion, without being cut short
+	by:
+	</p><ul class="">
+	  <li class=""><tt>break</tt>,</li>
+	  <li class=""><tt>return</tt> - returning from the containing function
+	    within the body of the loop,</li>
+	  <li class=""><tt>raise</tt> - an exception being raised in the body
+	    of the loop but not being handled.</li>
+	</ul>
+	<p class="handout">Exception-handling <tt>try</tt> blocks
+	have a similar optional <tt>else</tt> block.</p>
+	<!--FIXME link to the Exception else block slide.-->
+      <p></p>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide28" style="visibility: visible;">
+  <h1>Laziness (is a virtue)</h1>
+  <ul class="">
+    <li class="">
+      <pre>for x in range(1000000):
+    if x &gt; 2:
+        break
+    do_stuff_with(x)
+      </pre>
+    </li>
+    <li class="">
+      Use <tt>xrange</tt> instead of <tt>range</tt>
+      <div class="handout">
+	Imagine you want to generate the numbers for 0 to
+	1000000. Using <tt>range</tt> would result in the creation of
+	a list of length 1000000, which would eat up significant
+	amounts of memory. <tt>xrange</tt> has similar behaviour
+	to <tt>range</tt>: rather than creating a list, it returns an
+	object capable of producing the desired numbers as and when
+	they are required. Consequently it is a little faster for
+	looping, and considerably more memory efficent.
+      </div>
+    </li>
+    <li class="">
+      Laziness allows you to avoid doing work that never needs to be done
+    </li>
+    <li class="">
+      Lazines can help you to deal more efficiently with large amounts
+      of data.
+    </li>
+        <li class="">
+      Laziness is becoming increasingly more important in Python as
+      the language evolves.
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="slide" id="slide29" style="visibility: visible;">
+  <h1>Functions</h1>
+  <pre>def my_function(arg1, arg2):
+
+    """Optional docstring."""
+
+    # Your implementation goes here
+
+    return a, b, c  # optional
+
+    </pre>
+  <pre class="">this_is_not_part_of_the_function()
+  </pre>
+  <p class="handout">... because the indentation has returned to the
+    level at which the function definition was started. Therefore the
+    block (containing the function body) has been closed.
+  </p>
+  <p class="handout">
+    If a function does not <tt>return</tt> anything explicitly, then
+    it will, implicitly, return <tt>None</tt>.
+  </p>
+  <ul class="">
+    <li class=""><tt>help(zip)</tt></li>
+    <li class="">Write your own (non-lazy) implementation
+      of <tt>enumerate</tt></li>
+    <li class="">Later we will write one just as lazy as the real <tt>enumerate</tt></li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide30" style="visibility: visible;">
+  <h1>Multiple return values</h1>
+<pre>def powers(n):
+    return n, n*n, n*n*n
+</pre>
+<p class="">The function returns three values all at once. The values are packed
+into a tuple.</p>
+<pre>ps = powers(2)</pre>
+<p class="">You can collect all the returned values at once, in a tuple ...</p>
+<pre>a,b,c = powers(2)</pre>
+<p class="">... or unpack the tuple at the call site, and receive each value in
+its own variable.</p>
+</div>
+
+
+
+<div class="slide" id="slide31" style="visibility: visible;">
+  <h1>First class objects</h1>
+  <ul class="">
+    <li class="">
+      Almost everything (including functions, classes, modules...)
+      in Python is a first-class object
+      <div class="handout">This means that they can be stored in
+      variables and data structures, passed to functions, returned
+      from function, just like any other value.</div>
+    </li>
+    <li class=""><pre>import math
+trig = math.sin, math.cos, math.tan
+for fn in trig:
+    print(<span class="markred">fn</span>, <span class="markgreen">fn(math.pi/3)</span>)
+</pre>
+    </li><!--FIXME delay the colouring of fn and fn(...) in the above.-->
+    <li class="">Note the important difference between
+    a <span class="markred">function</span> and the result
+    of <span class="markgreen">calling that function</span>.
+    <div class="handout"><ul>
+	<li>
+	  In order to call a function, you must place parentheses just
+	  after it. Any arguments to the function are placed between
+	  the parentheses.
+	</li>
+	<li>
+	  In Python it is quite normal to want to refer to the
+	  function itself without wanting to call it (to store it
+	  somewhere, or to pass it to another function etc.).
+	</li>
+	<li>
+	  Make sure to add the parentheses where necessary, and to
+	  leave them out when you don't want the function to be called.
+	</li>
+      </ul>
+    </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide32" style="visibility: visible;">
+  <h1>Lexical Closures</h1>
+  <pre class="">def make_adder(n):
+
+    def adder(x):
+        return n+x
+
+    return adder
+    </pre>
+  <ul class="handout">
+    <li>Two functions are being defined, one inside the other.</li>
+    <li>The outer function returns the inner function.</li> 
+    <li>The inner function refers to a name (<tt>n</tt>) which is
+      bound in the scope of the outer function.
+      <ul>
+	<li>When the outer function returns, <tt>n</tt>, being a
+	  local variable, goes out of scope, and it would normally
+	  disappear along with its binding.
+	</li>
+	<li>
+	  The inner function prolongs the lifetime of this binding, so
+	  that it can use <tt>n</tt> when it itself is called.
+	</li>
+	<li>
+	  Each time the outer function is called, a different version
+	  of the inner function is returned, each with its own,
+	  distinct binding of <tt>n</tt>.
+	</li>
+	<li>
+	  The inner function the binding of <tt>n</tt>. It is
+	  a <em>closure</em> over <tt>n</tt>.
+	</li>
+      </ul>
+    </li>
+  </ul>
+<pre class="">add3 = make_adder(3)
+add9 = make_adder(9)
+print(add3(4), add9(4))
+  </pre>
+<p class="">Each different instance of <tt>adder</tt>
+  carries around its own version of <tt>n</tt>.</p>
+<p class="handout">Aside: notice that a closure is a combination of
+  functionality and state ... which is the basis of object oriented
+  programming.</p>
+</div>
+
+
+
+<div class="slide" id="slide33" style="visibility: visible;">
+  <h1>Unqualified name search</h1>
+  <ul class="">
+    <li class="">
+      L<sup>n</sup>GB: Local (nested), Global, Builtins
+      
+      <p class="handout">An unqualified name is looked up in the
+      following order. The first matching binding found is the one used.</p>
+
+      <ul class="handout">
+
+	<li><b>L</b>: Inside a function body, look for a
+	binding in the function's <b>L</b>ocal scope. (Outside
+	functions, go straight to step <tt>B</tt>)</li>
+
+	<li><b>n</b>: Progress outwards through any surrounding
+	<b>n</b>ested functions, looking in the local scope of those
+	functions.</li>
+
+	<li><b>G</b>: Look for a binding in the <b>G</b>local
+	scope.</li>
+
+	<li><b>B</b>: Look for a binding in the <b>B</b>uiltins.</li>
+
+	<li>If no binding was found, raise a <tt>NameError</tt>.</li>
+
+      </ul>
+      <p class="handout">If a name is bound inside a function (either
+      by virtue of being a parameter of the function, or by having an
+      assignment made to it), the binding is local to that
+      function. Sometimes you may wish to assign to a global name from
+      within a function. The the implication that bindings inside
+      functions are local, prevents you from doing so. In such
+      situations, you may declare this intent using
+      the <tt>global</tt> keyword:
+	</p><pre class="handout">	  a, b = 0, 0
+
+	  def foo():
+              <b>global a</b>
+              a,b = 3, 3
+
+          foo()
+          print(a, b)  # =&gt; 3 0 
+	</pre>
+	<p class="handout">
+	  In the above, <tt>a</tt> is bound to <tt>3</tt> in the
+	  global namespace, rather than the local namespace. <b>b</b>
+	  is bound to <tt>3</tt> in the function's local
+	  namespace, <em>shadowing</em> the global binding, so the
+	  global binding of <tt>b</tt> is unaffected by the
+	  assignment.
+	</p>
+      <p></p>
+    </li>
+    <li class="">
+      Prior to Python 2.1, enclosing function scopes were not
+      searched, so the lookup rule was simply LGB.
+    </li>
+  </ul>
+
+</div>
+
+
+
+<div class="slide" id="slide34" style="visibility: visible;">
+  <h1>Argument passing</h1>
+  <p>Please make sure you understand a given function before trying out the next.</p>
+  <pre>def one(*args):
+    return args
+  </pre>
+  <p class="handout">All (positional) arguments are collected into a
+    tuple. That tuple will be bound, within the body of the function, to
+    the name specified after the <tt>*</tt>.</p>
+  <pre>def two(a=1, b=2):
+    return a,b
+  </pre>
+  <p class="handout">These are called <em>keyword parameters</em>
+    or <em>default arguments</em>. They provide default values, in case
+    no corresponding argument is passed in. They also allow you to pass
+    in arguments out of order, by naming
+    them. Try <tt>two(c=9)</tt>.
+  </p>
+  <pre>def three(*args, **kwds):
+    return args, kwds
+  </pre>
+  <p class="handout">Just like a single <tt>*</tt> provides a means of
+    collecting all remaining positional arguments into a tuple, all
+    remaining keyword arguments may be collected into a dictionary: the
+    dictionary will be bound to the name specified
+    after <tt>**</tt>. (Dictionaries will be introduced soon.)
+  </p>
+  <pre>def four(a,b=1, *args, **kwds):
+    return a, b, args, kwds
+  </pre>
+  <p class="handout">A combination of all sorts of things to test your
+    understanding. Note that it is impossible to pass positional
+    arguments after a keyword argument.
+  </p>
+  <pre>  one(*'hello')
+  one(*range(3))
+  two(**{'b':'banana', 'a':'apple'})
+  three(*(range(3)+range(3)),**dict(a=1, b=2))
+  </pre>
+  <p class="handout">
+    In function parameter lists, the stars collect positional and
+    keyword arguments into tuples and dictionaries respectively. In
+    function argument lists the starts work in reverse: single star
+    unpacks any iterable into separate positional arguments; double
+    start unpacks any mapping type into separate keyword arguments.
+    </p>
+</div>
+
+
+<div class="slide" id="slide35" style="visibility: visible;">
+  <h1>Garbage collection</h1>
+  <ul class="">
+    <li class="">
+      Allocating and freeing memory is NOT YOUR PROBLEM.
+      <ul class="">
+	<li class="">Yippee !!!</li>
+	</ul>
+    </li>
+    <li class="">Python uses reference counting.
+      <p class="handout">
+	Reference counting relies on maintaining a count of the number
+	of ways in which a given object may be accessed: the number of
+	references to the object. When the number of references is
+	zero, we know that the object can never be accessed again, and
+	it may be forgotten, or deallocated.
+      </p>
+    </li>
+    <li class="">There is also a garbage collector for collecting circular
+    garbage: module <tt>gc</tt>.
+      <p class="handout">
+	Consider two objects referring to eachother. If all external
+	references to these objects disappear, they will become
+	inaccessible and should therefore be deallocated. However,
+	their reference count will remain greater than zero, because
+	they are referring to eachother. Such objects are known
+	as <em>circular garbage</em> and constitute a memory leak in
+	reference counting schemes.
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide36" style="visibility: visible;">
+  <h1>Type systems</h1>
+  <ul class="">
+    <!--FIXME finish this slide-->
+    <li class="">Python is NOT weakly typed</li>
+    <li class="">
+      There are (at least) 3 orthogonal axes spanning type-system space
+      <ul class="">
+	<li class="">Static vs Dynamic</li>
+	<li class="">Weak vs Strong
+	  <ul class="">
+	    <li class="">nobody really knows what this means!
+	      <div class="handout">
+		<!-- FIXME Typically, people might mean one of the following this
+		by it.
+
+
+		Inappropriate operations
+
+		Implicit conversion of types.
+
+		Overloading
+
+		Dynamic typing - this is just plain misuse of the word.-->
+
+	      </div>
+	    </li>
+	    </ul>
+	</li>
+	<li class="">Explicit vs Implicit
+	  <ul class="">
+	    <li class="">Declaration vs Inference</li>
+	</ul></li>
+      </ul>
+    </li>
+    <li class="">Many people confuse the first two</li>
+    <li class="">Python is <em>strongly dynamically</em> typed</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide37" style="visibility: visible;">
+  <h1>Dictionaries</h1>
+  <p>Dictionaries are hash-tables: fast maps</p>
+  <ul>
+    <li><tt>type({})</tt>
+      <p class="handout">The type is called <tt>dict</tt>.</p>
+    </li>
+    <li><tt>d = {}</tt>
+      <p class="handout">An empty dictionary. You can also create
+      one by calling the <tt>dict</tt> type thus: <tt>dict()</tt>.</p>
+    </li>
+    <li><tt>d[1] = 'eins'; d['zwei'] = 2</tt>
+      <p class="handout">This is how you add key-value pairs into
+      the dictionary. <tt>1</tt> is the key corresponding to the value
+      <tt>'eins'</tt>; <tt>'zwei'</tt> is the key corresponding to the
+      value <tt>2</tt>. Any <em>immutable</em> type can act as a
+      key.</p>
+    </li>
+    <li><tt>d[1]</tt>
+      <p class="handout">This is how you look up values
+      corresponding to some key. Here we ask for the value associated
+      with the key <tt>1</tt>.</p>
+    </li>
+    <li><tt>d['eins']</tt>
+      <p class="handout">Lookup can only be done on
+      keys. <tt>'eins'</tt> is present in the dictionary only as a
+      value, not as a key, therefore we get a <tt>KeyError</tt>.</p>
+    </li>
+    <li><tt>d['zwei']</tt>
+      <p class="handout">This works, because <tt>'zwei'</tt> is a key.</p>
+    </li>
+    <li><tt>len(d)</tt>
+      <p class="handout">This gives the number of key-value pairs
+      in the dictionary.</p>
+    </li>
+    <li><tt>1 in d, 'eins' in d, 1 not in d</tt>
+      <p class="handout">The <tt>in</tt> operator tests whether the
+      object is equal to one of the keys of the dictionary. It does
+      not check the dictionary values.</p>
+    </li>
+    <li><tt>squares = {2:4, 3:9, 4:16, 5:25}</tt>
+      <p class="handout">You can create populated dictionaries inline,
+      by typing in their printed representation. Alternatively, if the
+      keys are strings, you can instantiate the <tt>dict</tt> type
+      with keyword arguments: <tt>dict(a=1, b=2, c=3)</tt>.</p></li>
+  
+<p class="">Keys must be immutable</p>
+<p class="">Dictionaries are un-ordered.
+  <span class="handout">Yes, they are presented visually in some
+  order, and you can iterate over their contents in some order, but
+  that order is meaningless, and will change as the dictionary
+  changes size and is re-hashed.</span></p><!--FIXME explain hashing-->
+<p>Don't forget <tt>dir(...)</tt></p>
+</ul></div>
+
+
+<div class="slide" id="slide38" style="visibility: visible;">
+  <h1>Dictionaries</h1>
+  <ul class="">
+    <li class="">Python uses dictionaries heavily in its own implementation,
+    so dictionaries are very highly optimized.
+      <div class="handout">Just about every name lookup in Python is
+      a dictionary lookup.</div>
+    </li>
+    <li class="">Python provides no switch construct. A common idiom is to use
+    dictionaries:
+      <pre>	dispatch = { 'a': do_this,
+	             'b': do_that,
+                     'c': the_other }
+
+	reply = raw_input()
+	dispatch[reply]()
+      </pre>
+      <p class="handout">
+	<tt>do_this</tt>, <tt>do_that</tt> and <tt>the_other</tt> must
+	already be defined at the time you define the dictionary, must
+	be callable, and must accept zero arguments.
+      </p>
+      <p class="handout">
+	I trust that I don't have to tell you to
+	try <tt>help(raw_input)</tt>.
+      </p>
+      <p class="handout">
+	In the above we have created a dictionary which maps choices
+	to actions. When the choice has been obtained (in this case by
+	using <tt>raw_input</tt>) it is used as a key in a dictionary
+	lookup. The dictionary returns the function corresponding to
+	the choice, and that function is immediately called.
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide39" style="visibility: visible;">
+  <h1>File I/O</h1>
+  <ul class="">
+    <li class="">
+      <pre><!--FIXME "file =" should turn red later-->
+<span class="markred">file =</span> open('myfile', 'w')
+print(1, 2, 3, 4, file=file)
+file.write('5 6 7 8')
+file = open('myfile', 'r')
+for line in file:
+    print(line)
+      </pre>
+    </li>
+    <li class="">Oops - we have
+    just <span class="markred">shadowed<!--FIXME at this, and other,
+    points I want the matching colour to appear in the preceding text
+    only when this part is revealed.--></span> the built-in type <tt>file</tt></li>
+    <li class="">The original is still available in <tt>__builtins__</tt></li>
+  </ul>
+  <p class="handout">You can use <tt>del</tt> to remove names from a
+    namespace. In this case, we can undo our mistake by
+    issuing <tt>del file</tt>. This will remove <tt>file</tt> from the
+    global namespace, causing <tt>file</tt> to be found in the builtin
+    namespace once more.</p>
+  <pre class="handout">    file is __builtins__.file    # False: the builtin is shadowed
+    del file                     # Remove the shadowing binding
+    file is __builtins__.file    # True
+  </pre>
+</div>
+
+
+
+
+<div class="slide" id="slide40" style="visibility: visible;">
+  <h1>With statement and context managers</h1>
+  <ul class="">
+    <li class="">
+      <pre>with open('myfile', 'w') as file:
+    print(1, 2, 3, 4, file=file)
+    file.write('5 6 7 8')
+with open ('myfile', 'r') as file:
+    for line in file:
+        print(line)
+      </pre>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide41" style="visibility: visible;">
+  <h1>Sorting</h1>
+  <ul class="">
+    <li class="">
+      Make a list of all usernames in <tt>/etc/passwd</tt>, sorted
+      by userid
+      <ul class="">
+	<li class="">That's the number, not the name</li>
+      </ul>
+    </li>
+    <li class="">Make sure you sort the numbers as integers, not as strings!</li>
+    <li class="">Constructors of the built-in types act as type converters
+      <p class="handout">
+	For example <tt>tuple([1,2,3])</tt>
+	or <tt>list('really?')</tt> or <tt>str(123)</tt>.
+      </p>
+      <ul class="">
+	<li class="">Avoid calling this casting</li>
+	<p class="handout ">
+	  Casting has subtly different meanings in different
+	  languages. In some cases it is used to describe the process
+	  of reinterpreting the same bit-representation of the data as
+	  representing some other type. This in NOT what is happening
+	  in Python. If you avoid the word 'cast' then you avoid the
+	  temptation to believe that such a meaning is implied. What
+	  is really happening is that you are instantiating a new type
+	  using an instance of some other type as a source of
+	  data. Call it type conversion.
+	</p>
+	
+	</ul>
+    </li>
+  </ul>
+  <p class="handout">
+    Frequently people choose to solve this using a dictionary. Given
+    that sorting is involved, the collection must be ordered:
+    dictionaries are unordered (remember, any order that they happen
+    to have is arbitrary and may change). Furthermore, it is possible
+    (though rare) for the password file to contain multiple usernames
+    with the same userid. Such a dictionary based solution will throw
+    away all but the last of a set of usernames that share an id. The
+    temptation to use a dictionary arises from the need to maintain an
+    association between the userid and the username, which is indeed
+    the forte of dictionaries. In this case, however, we can use a far
+    more lightweight means of maintaining an association between two
+    objects.
+  </p>
+  <p class="handout">
+    I recommend using tuples to store the two interesting data from
+    each record as a pair, and collecting these pairs in a list:
+    </p><pre class="handout">pairs = []
+for record in passwordfile:
+    name, id = ...
+    pairs.append((name, id))</pre>
+  <p></p>
+  <p class="handout">
+    Read <tt>help([].sort)</tt>. Note that the sort is performed <b>in
+      place</b>. While it is not explicitly stated, you could infer
+    that <tt>list.sort</tt> returns <tt>None</tt>. Therefore you must
+    be very careful ... many people are tempted to write
+    </p>
+    <pre class="handout">stuff = stuff.sort()</pre>
+    <p class="handout">
+      which is just a very inefficient equivalent of <tt>stuff =
+      None</tt>. The correct way to proceed is this:
+    </p>
+    <pre class="handout">stuff = ...   # collect your data
+stuff.sort()  # sort the data
+print(stuff)   # inspect the sorted data</pre>
+    <p class="handout">
+      From Python 2.4 onwards, it is also possible to do
+    </p><pre class="handout">      stuff = sorted(stuff)</pre>
+  <p></p>
+  <p class="handout">
+    The question remains, how to ensure that the sort is performed on
+    the id? There are a number of approaches possible.
+  </p>
+  <p class="handout">
+    The first approach, which will work even in ancient versions of
+    Python, relies on knowing how Python compares sequences. Sequences
+    are compared by initially comparing the first elements only. If
+    they differ, then a decision is reached on the basis of those
+    elements only. If the elements are equal, only then are the next
+    elements in the sequence compared ... and so on, until a
+    difference is found, or we run out of elements. Therefore, we can
+    arrange to have our pairs sorted by id, by placing the ids first
+    in the tuple: 
+  </p>
+  <pre class="handout">pair = id, name</pre>
+  <p class="handout">
+    The second approach (which also works in ancient Pythons), relies
+    on being able to decypher the
+    cryptic <tt>help(list.sort)</tt>. You should notice
+    that <tt>list.sort</tt> has three keyword parameters. The first of
+    these is called <tt>cmp</tt>. If this argument is <tt>None</tt>
+    (which it will be, by default), <tt>list.sort</tt> will use
+    Python's built-in <tt>cmp</tt> function to compare the elements of
+    the list it is sorting. <tt>cmp</tt> is a function of two
+    arguments which returns a positive number when it considers the
+    first argument to be 'greater' then the second, returns <tt>0</tt>
+    when it considers the arguments to be equal, and returns a
+    negative number otherwise. You can instruct <tt>list.sort</tt> to
+    use a different comparison criterion, by supplying some other
+    function with the same interface. Let's illustrate this in the
+    context of our exercise, by assuming that we have stored a list of
+    pairs like this
+  </p>
+  <pre class="handout">pair = name, id</pre>
+  <p class="handout">
+    We want to sort according to <tt>id</tt> and
+    ignore <tt>name</tt>. We can achieve this by writing a function
+    that compares the second elements of the pairs it receives, and
+    returns a number matching the convention used by <tt>cmp</tt> as
+    described above.
+  </p>
+  <pre class="handout">def my_cmp(a, b):
+    if a[1] &gt; b[1]:
+        return +1
+    if a[1] == b[1]:
+        return 0
+    return -1</pre>
+  <p class="handout">Note that you must remember the convenion, and
+  that there is a lot of fiddling around with indices. A much more
+  concise and less error-prone (and more efficient) way of writing
+  this function is</p>
+  <pre class="handout">def my_cmp(a, b):
+    return cmp(a[1], b[1])</pre>
+  <p class="handout">
+    Now you can use this function to tell <tt>list.sort</tt> how to
+    compare the pairs:
+  </p>
+  <pre class="handout">pairs.sort(cmp=my_cmp)</pre>
+  <p class="handout">
+    or
+  </p>
+  <pre class="handout">pairs.sort(my_cmp)</pre>
+  <p class="handout">
+    or even
+  </p>
+  <pre class="handout">pairs.sort(lambda a,b: cmp(a[1], b[1])) <small> # lambda explained on next slide</small></pre>
+  <p class="handout">
+    Another solution, which became available in Python 2.4, relies
+    on <tt>sort</tt>'s keyword parameter <tt>key</tt>. Here you can
+    pass a function which <tt>list.sort</tt> will use to generate
+    values according to which the list's elements should be sorted. In
+    our case
+  </p>
+  <pre class="handout">pairs.sort(key=lambda p:p[1]) <small> # lambda explained on next slide</small></pre>
+  <p class="handout">
+    will do the trick.
+  </p>
+  <p class="handout">
+    A note about efficiency. Sorting typically involves making many
+    comparisons between the elements. Python's built-in <tt>cmp</tt>
+    is an efficient low-level function. By making <tt>list.sort</tt>
+    use a pure-Python function instead, you are getting hit by the
+    pure-Python function overhead (which is relatively large compared
+    to the C function overhead) on each and every comparison. This
+    might slow you down noticeably. The <tt>key</tt> function will be
+    called exactly once, for every element in the list. This approach
+    is likely to be measurably faster for large lists.
+    
+    If efficiency is really important (and you have proven that a
+    significant proportion of time is spent in these functions) then
+    you have the option of re-coding them in C (or another low-level
+    language).
+  </p>
+</div>
+
+
+<div class="slide" id="slide42" style="visibility: visible;">
+  <h1>lambda, Higher-order functions</h1>
+  <ul class="">
+    <li class="">anonymous function (function literal) </li>
+    <li class=""><tt> lambda a,b,c: a*b+c </tt></li>
+    <li class=""><tt> (lambda a,b,c: a*b+c)(2,3,4) </tt></li>
+    <li class=""><tt> lambda a,b,c: a*b+c(2,3,4) </tt></li>
+    <li class=""><tt> map(lambda a:a+1, [1,2,3,4]) </tt></li>
+    <li class=""><tt> filter(lambda x:x%2, range(20)) </tt></li>
+    <li class=""><tt> from functools import reduce </tt></li>
+    <li class=""><tt> reduce(<span class="markgreen">lambda a,b: a+b</span>,
+    range(10))</tt>
+      <p class="handout">I trust that you didn't need prompting to
+      do <tt>help(map)</tt> and so on.</p>
+      <ul class="">
+	<li class=""><tt class="markgreen">operator.add</tt><!--FIXME green
+						       should only appear in previous line when this line is uncovered-->
+	  <div class="handout">
+	    The <tt>opeartor</tt> module contains functions which
+	    are typically accessed not by name, but via some symbols
+	    or special syntax. In this case, <tt>operator.add</tt>
+	    is the name used to access the function which is more
+	    commonly accessed via the infix operator <tt>+</tt>.
+	  </div>
+	</li>
+      </ul>
+    </li>
+    <li class=""><tt> reduce(lambda a,b : f'({a} x {b})', 'abcde') </tt></li>
+  </ul>
+  <p class="handout">
+    Functions like <tt>map</tt>, <tt>reduce</tt> and <tt>filter</tt>
+    are found in just about any lanugage supporting functional
+    programming. They all provide functional abstraction for commonly
+    written loops. I recommend using these functions in preference to
+    writing your own equivalent loops because
+
+    </p><ul class="handout">
+      <li>Writing loops by hand is quite tedious and error-prone.</li>
+      <li>The function version is often clearer to read.</li>
+      <li>The functions result in faster code (unless it makes you
+      introduce extra pure-Python function-call overhead to an
+      otherwise quick operation ...  as in the case of <tt>lambda a,b:
+      a+b</tt>, which adds the relatively high pure-Python function
+      call overhead to the very fast addition operation. In this case,
+      we can used <tt>operator.add</tt> to avoid the problem.)</li>
+    </ul>
+    
+  <p></p>
+</div>
+
+
+<div class="slide" id="slide43" style="visibility: visible;">
+  <h1>Summing exercise</h1>
+  <ul class="">
+    <li class="">Given a file with an arbitrary number of numbers on each line ...</li>
+    <li class="">... make a list of the sums of the numbers on each line.
+      <div class="handout">
+	For example, if your file contains:
+	<pre>	  1 2 3
+	  4 5 6
+	  7 8 9 10
+	</pre>
+	Your program should give the results <tt>6</tt>, <tt>15</tt>
+	and <tt>24</tt>.
+      </div>
+    </li>
+    <li class=""> (Later ... allow non-numbers to appear in your file, and
+    ignore them in the sum.) </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide44" style="visibility: visible;">
+  <h1>Division</h1>
+  <ul class="">
+    <li class=""><tt>3/2, 3//2, 3.0/2.0, 3.0//2.0</tt></li>
+    <li class=""><tt>from __future__ import division</tt></li>
+    <li class=""><tt>3/2, 3//2, 3.0/2.0, 3.0//2.0</tt>
+      <p class="handout">
+	Note that the meaning of <tt>3/2</tt> will change in Python 3!
+	In Python 2 integer divison is truncates and preserves the
+	integer type; in Python 3 its result is always a float and no
+	truncation occurs.
+      </p>
+    </li>
+    <li class=""><tt>4/2</tt></li>
+    <li class="">Available in Python 2.2</li>
+    <li class="">Default in Python 3.0</li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide45" style="visibility: visible;">
+  <h1>Exceptions</h1>
+<pre class="">try:
+   <span class="markgrey"># code body</span>
+except ArithmeticError:
+   <span class="markgrey"># what to do if arithmetic error</span>
+except IndexError as the_exception:
+   <span class="markgrey"># the_exception refers to the exeption in this block</span>
+except:
+   <span class="markgrey"># what to do for ANY other exception</span>
+else:  <span class="markgreen"># optional</span>
+   <span class="markgrey"># what to do if no exception raised</span>
+</pre>
+<pre class="">try:
+   <span class="markgrey"># code body</span>
+finally:
+   <span class="markgrey"># what to do ALWAYS</span>
+</pre>
+<p class="handout">Starting with Python 2.5, you can use
+  the <tt>with</tt> statement to simplify the writing of code which
+  would previously use the <tt>finally</tt> block.</p>
+    <p class="">Before Python 2.5 <tt>except</tt> and <tt>finally</tt> were
+    mutually exclusive within a single <tt>try</tt>.</p>
+</div>
+
+
+<div class="slide" id="slide46" style="visibility: visible;">
+  <h1>Exceptions</h1>
+  <ul class="">
+    <li class="">Derive your own exceptions from the built-in <tt>Exception</tt>.</li>
+    <li class="">Raise exceptions with the <tt>raise</tt> keyword.</li>
+    <li class="">The constructor of <tt>Exception</tt> accepts arguments, which
+    are displayed in the printed representation of the exception</li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide47" style="visibility: visible;">
+  <h1>Raising Exceptions</h1>
+  <ul class="">
+    <li class=""><tt>raise OverflowError</tt></li>
+    <li class=""><tt>raise OverflowError("Bath is full")</tt></li>
+    <li class=""><tt>e = OverflowError("Bath is full")<br> raise e</tt></li>
+    <li class=""><pre>except Exception as e:
+    ...
+    raise e</pre></li>
+    <li class=""><pre>except Exception:
+    ...
+    raise</pre></li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide48" style="visibility: visible;">
+  <h1>Exception semantics</h1>
+  <pre>def bottom():
+    print('bottom 1')
+    middle()
+    print('bottom 2')
+
+def middle():
+    top()
+    try:
+        print('middle')
+    except ValueError:
+        print('handling ValueError')
+
+def top():
+    raise ValueError
+
+bottom()
+  </pre>
+</div>
+
+
+<div class="slide" id="slide49" style="visibility: visible;">
+  <h1>Exception hierarchy</h1>
+  <ul class="">
+    <li class="">The standard exceptions are organized in an inheritance
+    hierarchy
+      <ul class="">
+	<li class="">e.g. <tt> OverflowError</tt> is a subclass
+	of <tt>ArithmeticError</tt>. <span class=""><span class="markgrey"> (NOT <tt>BathroomError</tt> !)</span></span></li>
+	</ul>
+    </li>
+    <li class="">Allows you to catch a range of exceptions with a single statement.</li>
+    <li class="">You can derive your own exceptions from any of the standard
+    ones</li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide50" style="visibility: visible;">
+  <h1><span class="markred">LBYL</span> vs <span class="markgreen">EAFP</span></h1>
+  <ul class="">
+    <li class=""><span class="markred">L</span>ook <span class="markred">B</span>efore <span class="markred">Y</span>ou <span class="markred">L</span>eap</li>
+    <li class=""><pre class="markred">if denominator == 0:
+    print("Oops")
+else:
+    print(numerator/denominator)
+      </pre>
+    </li>
+    <li class=""><span class="markgreen">E</span>asier to <span class="markgreen">A</span>sk for <span class="markgreen">F</span>orgiveness than <span class="markgreen">P</span>ermission</li>
+    <li class=""><pre class="markgreen">try:
+    print(numerator/denominator)
+except ZeroDivisionError:
+    print("Oops")
+      </pre>
+    </li>
+    <li class=""><span class="markgreen">EAFP</span> is the Pythonic way</li>
+    <li class="">Time to re-visit the sum-lines-in-file exercise.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide51" style="visibility: visible;">
+  <h1>IPython</h1>
+  <ul class="">
+    <li class="">An enhanced Python shell</li>
+    <li class=""><tt><a href="http://ipython.scipy.org/">http://ipython.scipy.org</a></tt></li>
+    <li class="">Persistent command history</li>
+    <li class="">Name completion</li>
+    <li class="">Shortcuts</li>
+    <li class="">Easy system shell access</li>
+    <li class="">Much more</li>
+    <li class="">Try it: <tt>ipython</tt></li>
+    <li class="">NOT part of the standard distribution</li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide52" style="visibility: visible;">
+  <h1>Queue abstract type</h1>
+  <p class="">
+    An abstract type is one defined by the operations that can be
+    performed on it.
+  </p>
+  <p class="">
+    Queue (FIFO)
+    </p><p class="handout">
+      FIFO: First In, First Out. Contrast this with a <em>stack</em>
+      which is LIFO: Last In, First Out.
+    </p>
+    <ul class="">
+      <li class="">Make a new queue</li>
+      <li class="">Add an element to the back of the queue</li>
+      <li class="">Remove an element from the front of the queue</li>
+    </ul>
+  <p></p>
+</div>
+
+
+
+<div class="slide" id="slide53" style="visibility: visible;">
+  <h1>A Python implementation of the queue abstract type</h1>
+  <pre>def make_queue():
+    return []
+
+def add_to_queue(queue, item):
+    queue.append(item)
+
+def remove_from_front_of_queue(queue):
+    return queue.pop(0)
+  </pre>
+</div>
+
+
+
+<div class="slide" id="slide54" style="visibility: visible;">
+  <h1>Classes</h1>
+  <pre>class Counter:
+
+    def __init__(self, start):
+        print(dir(self))
+        self.count = start
+        print(dir(self))
+
+    def up(self, n=1):
+        self.count += n
+
+    def down(self, n=1):
+        self.count -= n
+  </pre>
+  <p class="handout">
+    We have written a <em>class</em>, a new type. The class is
+    called <tt>Counter</tt>. It has two ordinary methods: <tt>up</tt>
+    and <tt>down</tt>. It also has a <em>magic method</em>
+    called <tt>__init__</tt>. <tt>__init__</tt> is also known as
+    the <em>constructor.</em>
+  </p>
+  <p class="handout">
+    Now is the time to stop ignoring the magic names. Magic names are
+    ones which, typically, are invoked by Python, in well-defined
+    situations, on your behalf. You can refer to the names directly,
+    if you so wish, but, typically, you don't. Some examples we have
+    already met in passing:
+    </p><ul class="handout">
+      <li><tt>__builtins__</tt> - Python looks in this namespace when a
+	name is looked up and is not found in a function's local scope,
+	or in the global scope. We referred to <tt>__builtins__</tt>
+	directly ourselves, when we investigated the consequences of
+	having shadowed <tt>file</tt>.
+      </li>
+      <li><tt>__len__</tt> - When we used <tt>len</tt> to find the
+      size of lists, dictionaries, etc., Python called this magic
+      method of the appropriate class.</li>
+    </ul>
+  <p></p>
+  <tt class="">a = Counter(10)</tt><br>
+  <p class="handout">
+    When calling a class, two magic functions are invoked on your
+    behalf. First, the magic function <tt>__new__</tt> is called: this
+    creates a new, unadulterated instance of the class. This new
+    instance is then passed as the first argument
+    to <tt>__init__</tt>: any arguments which were explicitly given in
+    the call to the class, are passed in the following positions. In
+    this case, the new instance is bound to <tt>__init__</tt>'s local
+    variable <tt>self</tt>. The explicit argument <tt>10</tt> is bound
+    to <tt>__init__</tt>'s local variable <tt>start</tt>. Within the
+    body of the constructor (<tt>__init__</tt>), <tt>self</tt> (the
+    new instance of the class) is given a new attribute
+    called <tt>count</tt>.&nbsp; <tt>self.start</tt> is bound
+    to <tt>count</tt>, so, in our case, <tt>self.start</tt> is now
+    bound to <tt>10</tt>. The constructor terminates (it must always
+    return <tt>None</tt>: in this case it does it implicitly),
+    therefore the local names <tt>self</tt> and <tt>start</tt> go out
+    of scope. The new instance is then returned as the result of the
+    call to the class. We bind it to the name <tt>a</tt>, thereby
+    preventing the reference count from dropping to zero, and keeping
+    the instance alive.
+  </p>
+  <tt class="">a.up(2)</tt><br>
+    <p class="handout">
+      When calling a method (<tt>up</tt>) of a class
+      (<tt>Counter</tt>) through its instance (<tt>a</tt>), in this
+      fashion, the instance used is passed in as the first argument to
+      the method. Any arguments explicitly given in the method call
+      are passed in after the instance. In our case, the class
+      instance we stored in the global variable <tt>a</tt> is bound to
+      the <tt>up</tt> method's local variable <tt>self</tt>, and the
+      number <tt>2</tt> is bound to <tt>up</tt>'s local
+      variable <tt>n</tt>. In the constructor, the <tt> count</tt>
+      attribute was bound to <tt>10</tt>. Now it is incremented
+      by <tt>n</tt>, which happens to be <tt>2</tt>,
+      so <tt>self.count</tt> is now 12. The <tt>up</tt> method
+      terminates, so its local variables <tt>self</tt> and <tt>n</tt>
+      go out of scope. The global variable <tt>a</tt> still refers to
+      the instance of <tt>Counter</tt>, keeping it alive.
+    </p>  
+  
+  <tt class="">print(a)</tt><br>
+  <p class="handout">
+    Python merely tells us that it is an instance of a class
+    called <tt>Counter</tt> which is in a module called <tt>__main__</tt>.
+  </p>
+  <tt class="">print(Counter)</tt><br>
+  <p class="handout">
+    Not all that helpful.
+  </p>
+  <tt class="">print(count)</tt><br>
+  <p class="handout">
+    There is no global name <tt>count</tt>, so you get a NameError
+    (unless you happen to have introduced a global <tt>count</tt>
+    somewhere along the way).
+  </p>
+  <tt class="">print(a.count)</tt><br>
+  <p class="handout">
+    But there is a <tt>count</tt> among the <em>instance attributes</em>
+    of our instance of <tt>Counter</tt>.
+  </p>
+  <tt class="">print(Counter.count)</tt><br>
+  <p class="handout">
+    There is no <em>class attribute</em> <tt>count</tt> in
+    the <tt>Counter</tt> class: AttributeError.
+  </p>
+  <tt class="">a.foo = 9</tt><br>
+  <p class="handout">We are free to stick attributes onto instances
+    whenever we like, though typically it is done in the
+    constructor.</p>
+</div>
+
+
+
+
+<div class="slide" id="slide55" style="visibility: visible;">
+  <h1>Queue class</h1>
+  <p>
+    Write a class which implements the queue idea discussed 2 slides
+    ago.
+  </p>
+  <ul class="">
+    <li class="">
+      Move the three functions into a class
+    </li>
+    <li class="">
+      Rename <tt>queue</tt> parameter to <tt>self</tt>.
+    </li>
+    <li class="">
+      Turn <tt>make_queue</tt> into a constructor:
+      <ul>
+        <li>
+          Rename <tt>make_queue</tt> to <tt>__init__</tt>
+        </li>
+        <li>
+          Give it a <tt>self</tt> parameter
+        </li>
+        <li>
+          Instead of returning the new list, make it an attribute of
+          the newly created object by sticking it onto <tt>self</tt>.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide56" style="visibility: visible;">
+  <h1>Inheritance, operators</h1>
+  <pre>class Addcounter(Counter):
+
+    def __repr__(self):
+        return 'Addcounter({.count})'.format(self)
+
+    def __add__(self, other):
+        return Addcounter(self.count + other.count)
+  </pre>
+  <p class="handout">
+    Here we define a new class <tt>Addcounter</tt>,
+    which <em>inherits</em> from <tt>counter.</tt> <tt>Addcounter</tt>
+    is a <em>subclass</em> of <tt>counter</tt>.
+  </p>
+  <p class="handout">
+    Multiple inheritance (inheritance from more that one class) is
+    supported: list all the supreclasses, separated by commas, between
+    the parentheses following the new class' name.
+  </p>
+  <p class="handout">
+    If a class has no superclasses, its name may be followed by empty
+    parentheses, or the parentheses may be absent altogether. Prior to
+    Python 2.5 empty parentheses were not permitted: they had to be
+    absent in the no-inheritance case.
+  </p>
+  <pre class="">    c = Counter(3)
+    a = Addcounter(4)
+    c + c
+    a + a
+    c + a
+    a + c
+  </pre>
+  <p class="handout">
+    Here we see two more magic names in action
+    </p><ul class="handout">
+      <li><tt>__add__</tt> When the <tt>+ operator is encountered,
+      Python looks for the <tt>__add__</tt> method of the left
+      operand's class (or superclasses)</tt>. Failing that, it looks
+      for an <tt>__radd__</tt> method of the right operand's class (or
+      superclasses). Failing that it raises a <tt>TypeError</tt>.
+      </li>
+      <li>
+	<tt>__repr__</tt> is called whenever the printed
+	representation of the object is required. Note
+	that <tt>__repr__</tt> must return a string.
+      </li>
+    </ul>
+  <p></p>
+</div>
+
+<div class="slide" id="slide57" style="visibility: visible;">
+  <h1>Specialized Queue</h1>
+  <p>
+    Create an <tt>EmergencyQueue</tt> class, which does everything that
+    the <tt>Queue</tt> class does, but also has the ability to add items
+    to the <em>front</em> of the queue.
+  </p>
+</div>
+
+
+<div class="slide" id="slide58" style="visibility: visible;">
+  <h1>Overriding and extending</h1>
+  <p>
+    Create a <tt>NoisyQueue</tt> class, which does everything that
+    the <tt>Queue</tt> class does, but also prints a message
+    to <tt>stdout</tt> whenever an item is added to the queue.
+  </p>
+</div>
+
+
+
+<div class="slide" id="slide59" style="visibility: visible;">
+  <h1>Privacy</h1>
+  <ul class="">
+    <li class="">Python does not enforce privacy by restricting access.</li>
+    <li class="">Convention: names starting with an underscore (<tt> _ </tt>),
+    refer to objects which you should not access directly, outside of
+    their defining scope (class or module).</li>
+    <li class="">Names starting (but not ending) with two underscores, will be
+    mangled
+      <ul class="">
+	<li class="">Intended as protection against name clashes with subclasses.</li>
+	</ul>
+      </li><li class="">Names which both start and end with two underscores are
+      special names (e.g. <tt>__init__</tt>). </li>
+    
+    <li class="">
+      Summary:
+      <ul>
+        <li><tt>_protected</tt></li>
+        <li><tt>__private</tt></li>
+        <li><tt>__protocol__</tt></li>
+      </ul>
+    </li>
+    <li class="">
+      Exercise: Apply these conventions to the classes we have written
+      so far.
+    </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide60" style="visibility: visible;">
+  <h1>Polymorphism Without Inheritance</h1>
+  <ul class="">
+    <li class="">In statically typed languages, polymorphism is usually
+    tightly coupled to inheritance (on interfaces in Java).</li>
+    <li class="">Polymorphism in Python does not depend on inheritance.</li>
+    <li class="">Inheritance is NOT required for heterogeneous containers</li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide61" style="visibility: visible;">
+  <h1>User-defined exceptions</h1>
+  <ul class="">
+    <li class="">
+      What happens if you try to remove an item from an empty <tt>Queue</tt>?
+    </li>
+    <li class="">
+      <tt>Queue</tt> clients shouldn't be made aware of, and confused
+      by the implementation details of the class.
+    </li>
+    <li class="">
+      Can we send a clearer message about what is going on?
+    </li>
+    <li class="">
+      Write your own <tt>EmptyQueue</tt> exception class and use it in
+      the implementation of <tt>Queue</tt>.
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide62" style="visibility: visible;">
+  <h1>Making modules</h1>
+  <ul class="">
+    <li class="">Two types of modules exist:
+      <ul class="">
+	<li class="">Pure Pthyon module: any file
+	called <tt>&lt;module-name&gt;.py</tt>, containing Python
+	code.</li>
+	<li class="">Extension module: a shared library conforming to some format.</li>
+	</ul>
+    </li>
+    <li class="">Python looks for modules in the directories listed
+    in <tt>sys.path</tt>.
+    <ul class="">
+      <li class=""><tt>sys.path</tt> includes any paths that are listed in the
+      environment variable <tt>PYTHONPATH</tt> at the time the
+      interpreter is started.</li>
+    </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide63" style="visibility: visible;">
+  <h1>Testing</h1>
+  <ul class="">
+    <li class="">Python's standard library includes a unit testing
+    module: <tt>unittest</tt>.</li>
+    <li class="">
+      Test-Driven Development: write test before implementing
+      functionality - the tests are a specifcation of the code you
+      have to write.
+      <!--FIXME wax lyrical about the benefits of TDD-->
+    </li>
+    <li class="">Write a module which passes 
+      <tt><a href="https://jgcourses.gitlab.io/python-introduction/src/test-queue.py">all these tests</a></tt>.</li>
+  </ul>
+  <p class="handout">
+    <tt>unittest</tt> belongs to a family of unit testing frameworks
+    in which the first implementation was written in Smalltalk. This
+    was then copied into many other languages. In C++ it is known as
+    CPPUnit, and in Java it is known as JUnit. If you are familiar
+    with those, then you will recognize the features described below.
+  </p>
+  <p class="handout">
+    Look at the <a href="https://jgcourses.gitlab.io/python-introduction/src/test-queue.py">source code</a> of the
+    test-suite. You will notice that there are some classes in there
+    which inherit from <tt>unittest.TestCase</tt>. This hooks those
+    classes into the test framework.
+  </p>
+  <p class="handout">
+    You will notice that those classes contain some methods whose
+    names start with <tt>test</tt>. The framework recognizes each of
+    those methods as a single test.
+  </p>
+  <p class="handout">
+    You will also find methods called <tt>setUp</tt>. These are run
+    just before each and every test.
+  </p>
+  <p class="handout">
+    If a <tt>tearDown</tt> method exists (none do, in our case), this
+    is called after each and every test in that class.
+  </p>
+  <p class="handout">
+    Within the methods you will find calls
+    to <tt>AssertEqual</tt>. This takes two arguments: if the two
+    arguments are equal, the test continues; otherwise the test is
+    aborted, and the framework records this test as having failed.
+  </p>
+  <p class="handout">
+    Another test assertion method is <tt>AssertRaises</tt>. This takes
+    at least two arguments. The first is an exception type, the second
+    is a callable. Any further arguments are passed as arguments to
+    the callable. <tt>AssertRaises</tt> calles the callable with the
+    given arguments, and only allows the test to continue if the given
+    exception, or a subtype, is raised by the callable. If no
+    exception is raised, the test is terminated, and registered as
+    having failed.
+  </p>
+  <p class="handout">
+    There are many other assertion methods available (but not present
+    in our example). Try <tt>dir(unittest.TestCase)</tt>.
+  </p>
+  <p class="handout">
+    If a test runs to completion, it is recorded as having passed, and
+    a single dot is written out to the progress report.
+  </p>
+  <p class="handout">
+    If some unhandled exception is raised in a test, the test suite
+    handles it by recording that the test contained an error. A single
+    E is written in the progress report. At the end of the run, a few
+    lines, including a traceback, are printed for that test.
+  </p>
+  <p class="handout">
+    If one of the framework methods (<tt>assertXXX</tt>
+    or <tt>failXXX</tt>) is not satisfied, the framework considers the
+    test to have failed. A single F is printed to the progress
+    report. At the end of the run, a few lines, including a traceback,
+    are printed for that test.
+  </p>
+  <p class="handout">
+    Before you start trying to implement the necessary code, it is
+    important to be sure that you are able to run the test suite, and
+    that the test suite is linking up with your code.
+  </p>
+  <p class="handout">
+    Download the test suite to your local filesystem.
+  </p>
+  <p class="handout">
+    Run the test suite in a separate terminal. Do not try to run the
+    suite interactively. In a fresh UNIX terminal, type <tt>python
+    test-queue.py</tt>. You should see a failure at line 2.
+  </p>
+  <p class="handout">
+    The cause of the faliure should be obivous. The test suite tries
+    to import a module called <tt>pqueue</tt>, and no such module
+    exists. This is the module you are about to write.
+  </p>
+  <p class="handout">
+    Create a flie called <tt>pqueue.py</tt>. It doesn't need to
+    contain anything yet. It just needs to exist. Make sure that it is
+    saved in your working directory. Run the test suite
+    again: <tt>python test_queue.py</tt>. You should now get an error
+    on line 3.
+  </p>
+  <p class="handout">
+    Once again, the reason should be obvious. The test suite tries to
+    import something called <tt>EmptyQueue</tt> from
+    the <tt>pqueue</tt> module. It is not there yet. We do not know
+    what <tt>EmptyQueue</tt> is supposed to be yet, but we want to get
+    past this line, so we do the simplest thing that will allow us to
+    progress: add the line <tt>EmptyQueue = 3</tt> into the source of
+    your module, and save it. We don't care, for now, that this is
+    likely to be wrong: we can deal with that later. For now, we just
+    want to see the tests running. Run the test suite once more.
+  </p>
+  <p class="handout">
+    Now, you should see some output which ends like this:
+  </p>
+    <pre class="handout">======================================================================
+ERROR: Submitting a non-int priority does not raise TypeError
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test-queue.py", line 17, in setUp
+    self.q = pqueue.PriorityQueue()
+AttributeError: 'module' object has no attribute 'PriorityQueue'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (errors=6)
+    </pre>
+  <p class="handout">
+    What you are seeing is the report produced by the test
+    framework. At the very bottom, you are told that the tests have
+    failed, because there are six errors. Before that you see
+    summaries of each failure. Before that, you should see
+    six <tt>E</tt>s. It is your task to turn those six <tt>E</tt>s
+    into six dots.
+  </p>
+  <p class="handout">
+    Various strategies and approaches to making the tests pass are
+    discussed at length in class.
+  </p>
+</div>
+
+
+<div class="slide" id="slide64" style="visibility: visible;">
+  <h1>The priority queue specification</h1>
+  <ul class="">
+    <li class=""><tt>add(object, priority)</tt> - adds object to queue.</li>
+    <li class=""><tt>pop()</tt> - remove next object from queue.</li>
+    <li class="">5 priority levels: 0, 1, 2, 3, 4.</li>
+    <li class="">0 is the highest priority.</li>
+    <li class="">2 is the default priority.</li>
+    <li class="">
+      <tt>len(q)</tt> should return the number of items in the
+      queue <tt>q</tt>.
+    </li>
+    <li class=""><tt>pop</tt>ping from an empty queue must
+    raise <tt>EmptyQueue</tt> (a user-defined exception).</li>
+    <li class=""><tt>add</tt>ing with an unacceptable priority must
+    raise <tt>ValueError</tt>.</li>
+    <li class=""><tt>add</tt>ing with a non-integer priority must raise <tt>TypeError</tt>.</li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide65" style="visibility: visible;">
+  <h1>List Comprehensions</h1>
+  <ul class="">
+    <li class="incremental"><tt>[ x*x for x in range(10) ]</tt></li>
+    <li class="incremental"><tt>[ (x,y) for x in range(4) for y in 'abc' ]</tt></li>
+    <li class="incremental"><tt>[ (x,y) for x in range(6) if x%2 for y in range(6) if x&gt;y ]</tt></li>
+    <li class="incremental"> <br> <h3> Python 2.7 onwards  </h3></li>
+    <li class="incremental"> Dictionary comprehensions </li>
+    <li class="incremental"><tt>{ x:x*x for x in range(10) }</tt></li>
+    <li class="incremental"> <h3>Set comprehensions </h3> </li>
+    <li class="incremental"><tt>{ x*x for x in range(10) }</tt></li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide66" style="visibility: visible;">
+  <h1>Generator Expressions</h1>
+  <ul class="">
+    <li class="">List comprehensions' lazy brother</li>
+    <li class=""><tt>
+	a = (n*n for n in xrange(10))<br>
+	next(a)
+    </tt></li>
+    <li class=""><tt>
+	sum(n*n for n in xrange(10))
+	<p class="handout">
+	When a generator expression appears as the only argument to a
+        function, it does not need an extra set of parentheses. The
+        parentheses of the function call can double up as the parentheses of
+        the generator expression syntax.
+	</p>
+    </tt></li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide67" style="visibility: visible;">
+  <h1>Memoization</h1>
+  <ul class="">
+    <li class="">Caching results of (expensive) function calls for future
+    use.</li>
+    <li class="">Write a <b class="markred">recursive</b> function to calculate
+    the <tt>N</tt>th Fibonacci number (yes, it's supposed to be
+    slow!) </li>
+    <li class="">See how slow it gets
+      <ul class="">
+	<li class="">Careful! start with small arguments and progress very slowly
+	  past 35.</li>
+	<li class="">Write a utility which allows you to time exactly how long
+	it takes to run.
+	  <div class="handout">
+	    <p>Hint: I suggest you use the module <tt>time</tt>.</p>
+	    <p>You need to write a utility
+	    which <em>conceptually</em> allows you to write</p>
+	    <p><tt>timethis(fib(35))</tt></p>
+	    <pi> in order to find out how long it takes to
+	    evaluate <tt>fib(35)</tt>. However, Python has
+	    an <em>eager</em> or <em>strict</em> evaluation
+	    strategy. This means that all arguments are
+	    evaluated <em>before</em> being passed in to the
+	    function. Consequently, <tt>fib(35)</tt> would be
+	    evaluated before <tt>timethis</tt> starts
+	    running. <tt>timethis</tt> would receive the integer
+	    14930352 (the result of evaluating <tt>fib(35)</tt>). The
+	    event <tt>timethis</tt> is supposed to measure will have
+	    already finished before <tt>timethis</tt> even
+	    starts. Therefore, your main problem is to find a way of
+	    delaying the evaluation of <tt>fib(35)</tt>. Put another
+	    way, you must find a way of communicating which function
+	    should be applied to which arguments, and
+	    allow <tt>timethis</tt> to decide when that application
+	    actually takes place.<p></p>
+	  </pi></div>
+	</li>
+      </ul>
+    </li>
+    <li class="">Write a memoizer ...</li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide68" style="visibility: visible;">
+<h1>Memoizer</h1>
+  <ul class="">
+    <li class="">Takes a callable as its argument.</li>
+    <li class="">Returns a callable.</li>
+    <li class="">The latter must
+      <ul class="">
+	<li class="">have identical semantics to the former,</li>
+	<li class="">never calculate the same value twice.</li>
+      </ul>
+    </li>
+    <li class="">Hints:
+      <ul class="">
+	<li class="">dictionary</li>
+	<li class=""><tt>instance(...)</tt>
+	==&gt; <tt>instance.__call__(...)</tt></li>
+	<li class="">The memoizer must have <b class="markred">no hard-wired references</b> to the
+	Fibonacci function. It should be a general memoizer.</li>
+      </ul>
+      <div class="handout">
+	<p>The memoizer should work like this:</p>
+	<p>Create a memoized version of your function, by passing
+	your function to the memoizer</p>
+	<p><tt>memfib = memoi(fib)</tt></p>
+	<p>Running the UNmemoized <tt>fib</tt> function should give
+	some result, and take an appreciable amount of time.</p>
+	<p><tt>fib(35)</tt> # =&gt;  14930352 in 30 seconds</p>
+	<p>Running the UNmemoized <tt>fib</tt> function a second time
+	with the same input should give the same result, and take
+	about the same amount of time.</p>
+	<p><tt>fib(35)</tt> # =&gt;  14930352 in 30 seconds</p>
+	<p>Running the memoized function with the same input should
+	give the same result, and take about the same amount of
+	time.</p>
+	<p><tt>memfib(35)</tt> # =&gt; 14930352 in 30 seconds</p>
+	<p>Running the memoized function with the same input a second
+	time, should give the same result, but take ALMOST NO TIME AT ALL.</p>
+	<p><tt>memfib(35)</tt> # =&gt; 14930352 in 0 seconds</p>
+      </div>
+    </li>
+    <li class="">Make sure it passes <a href="https://jgcourses.gitlab.io/python-introduction/src/test-memo.py">these tests</a>.</li>
+    <li class="">Write an iterative Fibonacci function.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide69" style="visibility: visible;">
+  <h1>Name resolution</h1>
+  <ul class="">
+    <li class=""><tt>mfib = memo(fib)</tt></li>
+    <li class=""><tt>time(mfib, 30)</tt> <span class="markgrey"># first time: takes a few seconds</span></li>
+    <li class=""><tt>time(mfib, 30)</tt> <span class="markgrey"># second time: instantaneous</span></li>
+    <li class="">Now give the memoized version the <span class="markgreen">same name as the original</span>,
+    and repeat the above</li>
+    <li class=""><tt><span class="markgreen">fib</span> = memo(<span class="markgreen">fib</span>)</tt></li>
+    <li class=""><tt>time(fib, 30)</tt> <span class="markgrey"># first time: instantaneous</span></li>
+    <li class=""><tt>time(fib, 30)</tt> <span class="markgrey"># second time: <span class="markred">even faster!</span></span></li>
+    <li class="">The name <tt>fib</tt> is resolved at runtime, so the memoized
+      version is called by the recursive calls.</li><!--FIXME an
+      animated diagram would be nice -->
+    <li class="">Previously, <tt>fib</tt> referred to the un-memoized
+    function, so the recursive calls called the un-memoized (slow) version.</li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide70" style="visibility: visible;">
+  <h1>Speed</h1>
+  <p>Download <a href="https://jgcourses.gitlab.io/cython-etc/cython-etc.tgz">this
+  tarball</a>, then
+    </p><ul>
+      <li><tt>tar zxvf cython-etc.tgz </tt></li>
+      <li><tt>cd cython-etc </tt></li>
+      <li><tt>source source-me.sh </tt></li>
+    </ul>
+  <p></p>
+</div>
+
+
+
+<div class="slide" id="slide71" style="visibility: visible;">
+  <h1>Generators</h1>
+  <pre><span class="markgrey">from __future__ import generators  # only in Python 2.2</span>
+
+def gen_ints(start, stop):
+    while start &lt; stop:
+        <span class="markblue">yield</span> start       # <span class="markgreen">next(...)</span>
+        start += 1
+    return                # StopIteration
+    </pre>
+<!--FIXME next() should not turn green until the matching next() is --
+  --revealed later-->
+  <p class=""><tt>
+      a = gen_ints(3,6) <br>
+      for i in a: print(i)
+  </tt></p>
+  <p class=""><tt>a = gen_ints(10,12)<br>
+      <span class="markgreen">next(a)</span><br>
+      <span class="markgreen">next(a)</span></tt> # keep repeating this <b>interactively</b></p>
+  <!--FIXME move all the sample source code into this directory and link to it.-->
+  <div class="handout">
+    Python's iterator protocol offers an example of duck typing: the
+    actual type of the object does not matter as long as the object is
+    able to act like an iterator. In order for it to be an iterator,
+    it must have a magic method <tt>__next__</tt> (accessed through
+    the builtin <tt>next(...)</tt>) which either returns the next
+    item, or signals the absence of further items by rasing
+    the <tt>StopIteration</tt> exception. (Note
+    that <tt>StopIteration</tt> is an example of an exception which is
+    not an error.) To be fully compliant with the iterator protocol
+    you also need the magic method <tt>__iter__</tt>. You can find the
+    full details
+    <a href="http://docs.python.org/lib/typeiter.html">here</a>.
+  </div>
+</div>
+
+
+
+<div class="slide" id="slide72" style="visibility: visible;">
+  <h1>itertools</h1>
+  <ul class="">
+    <li class="">New module in Python 2.3.</li>
+    <li class="">
+      Use it to re-implement <tt>enumerate</tt> (Use
+      <a href="https://jgcourses.gitlab.io/python-introduction/src/test-enumerate.py"> this test </a> to check it.)
+      <div class="handout">
+	<tt>def Enumerate(it): return izip(count(), it) </tt>
+      </div>
+    </li>
+    <li class="">
+      Create a collection of the squares of all the fibonacci numbers
+      which are greater than 1000
+      <div class="handout">
+	<tt> fibsquares_gt_1000 = imap(lambda x:x*x, dropwhile(lambda x:x&lt;=1000, fibg()))</tt>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide73" style="visibility: visible;">
+  <h1>Pervasive laziness in Python 3</h1>
+  <ul class="">
+    <li class=""><tt>range</tt></li>
+    <li class=""><tt>map, filter, zip</tt></li>
+    <li class=""><tt>dict.keys()</tt> etc</li>
+    <li class=""><tt></tt></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="slide" id="slide74" style="visibility: visible;">
+  <h1>State changes</h1>
+  <pre class="">p = Happy('Proteus')
+
+p.greet()     # Proteus says "Hellloooo!"
+p.sing()      # Lah-de-daaaaah!
+p.change()
+
+p.greet()     # Proteus says "Get lost!"
+p.sing()      # Proteus is too depressed to sing.
+p.change()
+
+p.greet()     # Proteus says "Hellloooo!"
+p.sing()      # Lah-de-daaaaah!
+  </pre>
+</div>
+
+
+
+
+<div class="slide" id="slide75" style="visibility: visible;">
+  <h1>State Pattern</h1>
+  <pre>class Happy:
+    def __init__(self, name):
+        self._name = name
+    def greet(self):
+        print(self._name, 'says "Hellloooo!"')
+    def sing(self):
+        print('Lah-de-daaaaah!')
+    def change(self):
+        self.__class__ = Sad
+
+class Sad:
+    def greet(self):
+        print(self._name, 'says "Get lost!"')
+    def sing(self):
+        print(self._name, "Is too depressed to sing")
+    def change(self):
+        self.__class__ = Happy
+  </pre>
+</div>
+
+
+
+<div class="slide" id="slide76" style="visibility: visible;">
+  <h1>Attribute lookup</h1>
+  <tt class="">
+class cls:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a = 1
+</tt><br><br>
+  <p class="handout">
+    Create a trivial class. Give it a class attribute called <tt>a</tt>.
+  </p>
+  <tt class="">
+inst = cls()</tt><br>
+  <p class="handout">
+    Instantiate the class
+  </p><br>
+  <div class="">
+    <div class="markgreen">
+      <tt>dir(cls)</tt>
+      <p class="handout"><tt>a</tt> is accessible through the class ...</p><br>
+      <tt>dir(inst)</tt>
+      <p class="handout">... and through the instance.</p><br>
+      <tt>cls.__dict__</tt>
+      <p class="handout"><tt>a</tt> is present in the class
+      dictionary ...</p><br>
+      <tt>inst.__dict__</tt>
+      <p class="handout">... but not in the instance dictionary.</p>
+    </div><br>
+  </div>
+  <p class="handout">
+    Bind the existing attribute <tt>a</tt>, and a completely new
+    attribute <tt>b</tt>, via the instance.
+  </p>
+  <tt class="">
+inst.a = 22<br>
+inst.b = 333
+  </tt>
+  <p class="">Now repeat the <span class="markgreen">green
+  stuff</span>.
+    </p><pre class="handout">dir(cls)
+dir(inst)
+cls.__dict__
+inst.__dict__
+</pre>
+  <p></p>
+  <p class="handout">
+    Some <tt>a</tt> or other is accessible through both the class and
+    the instance. <tt>b</tt> is accessible only through the instance.
+  </p>
+  <p class="handout">
+    <tt>b</tt> is present only in the instance dictionary. There are
+    two different <tt>a</tt>s, one in the class dictionary and one in
+    the instance dictionary.
+  </p>
+  <p class="handout">
+    Attributes accessed through class instances are looked up first in
+    the instance itself, then in the instance's class, then in any
+    superclasses. The first found is the one used.
+  </p>
+  <p class="handout">
+    Attributes bound through a class instance are always bound to the
+    instance itself.
+  </p>
+</div>
+
+<div class="slide" id="slide77" style="visibility: visible;">
+  <h1>Binding Mechanisms</h1>
+  In the surrounding scope
+  <ol class="">
+    <li class=""><tt><span class="markred">a</span> = ...</tt></li>
+    <li class=""><tt>def <span class="markred">a</span>(...):</tt></li>
+    <li class=""><tt>class <span class="markred">a</span>(...):</tt></li>
+    <li class=""><tt>import <span class="markred">a</span></tt> <br>
+        <tt>from b import <span class="markred">a</span></tt> <br>
+          etc.
+    </li>
+    <li class="">for <tt><span class="markred">a</span> in ...</tt></li>
+    <li class="">
+      <tt>except ... as <span class="markred">a</span></tt><br>
+      <tt>with ... as <span class="markred">a</span></tt><br>
+      etc.
+    </li>
+  </ol>
+</div>
+
+
+
+
+<div class="slide" id="slide78" style="visibility: visible;">
+  <h1>Binding Mechanisms </h1>
+  In the local scope
+  <ol class="">
+    <li class=""><tt>def b(<span class="markred">a</span>):</tt></li>
+    <li class=""><tt>lambda  <span class="markred">a</span>: ...</tt></li>
+    
+  </ol>
+  In the <tt>b</tt> namespace
+  <ol class="">
+    <li class=""><tt>b.<span class="markred">a</span> = ...</tt></li>
+    <li class=""><tt>setattr(b, '<span class="markred">a</span>', ...)</tt></li>
+    <li class=""><tt>b.__dict__['<span class="markred">a</span>'] = ...</tt></li>
+    
+  </ol>
+</div>
+
+
+
+
+<div class="slide" id="slide79" style="visibility: visible;">
+  <h1>Type/Class Unification</h1>
+  <ul class="">
+    <li class="">Initially, user defined types were distinct from the built-in
+    types; it was impossible to derive your own classes from the
+    built-ins.</li>
+    <li class="">All the classes we have written so far are 'classic' classes;
+    these are distinct from the built-in types.</li>
+    <li class="">With 'new-style' (as opposed to 'classic') classes it is
+    possible to derive user-defined classes from the built-ins.</li>
+    <li class="">A new-style class is one which inherits (directly or
+    indirectly) from <tt>object</tt>.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide80" style="visibility: visible;">
+  <h1>Type/Class Unification</h1>
+  <pre>class Old: pass
+
+class New(object): pass
+
+oldinstance = Old()
+newinstance = New()
+
+type(Old), type(oldinstance)  # classobj, instance
+type(New), type(newinstance)  # type,     New
+
+type(Old()) is Old            # False
+type(New()) is New            # True
+  </pre>
+  <div class="handout">
+    I advise you to use new-style classes by default from now on,
+    because
+    <ul>
+      <li>
+        They are better than classic classes. (For example, the next
+        exercise we do is most easily done with properties which only
+        work fully in new-style classes.)
+      </li>
+      <li>
+        New-style classes are the only kinds of classes available in
+        Python 3; making all your classes new-style will leave you
+        with less work to do when you come to migrate your code to
+        Python 3.
+      </li>
+      <li>
+      </li>
+      <li>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="slide" id="slide81" style="visibility: visible;">
+  <h1>Say "No!" to getters and setters</h1>
+  <ul class="">
+    <li class="">
+      In languages such as Java and C++ there is a strong dogma
+      demanding that all data members must be private ...
+    </li>
+    <li class="">
+      ... even if you then make them public, by providing getters and
+      setters for them.
+    </li>
+    <li class="">
+      The purpose of getters and setters is to make all attributes
+      look like functions, even those which really are data.
+    </li>
+    <li class="">
+      This allows you to change your mind about the implementation
+      details, while guaranteeing that you can keep the interface
+      stable.
+    </li>
+    <li class="">
+      In Python, we have the ability to make function attributes look
+      like data attributes. This allows us change our mind about the
+      implementation details, without breaking the interface, even if
+      we have public data attributes.
+    </li>
+    <li class="">
+      It's perfectly OK to let classes have public data in Python.
+    </li>
+    <li class="">
+      Do NOT write trivial getters and setters in Python.
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="slide" id="slide82" style="visibility: visible;">
+  <h1>Properties</h1>
+  <ul class="">
+    <li class="">Read <tt>help(property)</tt> and solve the following problem
+    without changing the original interface of the class. </li>
+    <li class="">
+      <pre>class Rectangle(object):
+    
+    def __init__(self, w, h):
+        self.w = w # Yes, just make it public!
+        self.h = h
+        self.a = w*h
+
+r = Rectangle(2,3)
+
+assert r.w ==  2
+assert r.h ==  3
+assert r.a ==  6
+
+r.w = 4
+
+assert r.w ==  4
+assert r.h ==  3
+assert r.a == 12 # FAILS HERE
+      </pre>
+    </li>
+    <li class="">
+      <a href="https://jgcourses.gitlab.io/python-introduction/src/properties-test.py">Unittest tests</a>
+    </li>
+    <li class="">
+      <a href="https://jgcourses.gitlab.io/python-introduction/src/properties.py">Guided solution</a>
+    </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide83" style="visibility: visible;">
+  <h1>Decorators</h1>
+  <ul class="">
+    <li class="">Static and class methods</li>
+    <li class="">Decorator syntax (2.4)</li>
+    <li class="">
+      Use property as a decorator in our earlier rectangle
+      example. <a href="https://jgcourses.gitlab.io/python-introduction/src/properties-as-decorators.py">Note</a>
+      the <tt>setter</tt> utility which was added in Python 2.6
+    </li>
+    <li class="">
+      Use the decorator syntax in conjunction with the memoizer.
+    </li>
+    <li class="">
+      Write a decorator for generator functions, which
+      enables <tt>send</tt> to be used right from the start.
+    </li>
+  </ul>
+</div>
+
+
+<div class="slide" id="slide84" style="visibility: visible;">
+  <h1>RAD</h1>
+  <ul class="">
+    <li class="">Develop in HLL, <b class="markgreen">benchmark</b> ... deploy or ...</li>
+    <li class=""><b class="markblue">Profile</b>, explore solution space, <b class="markgreen">benchmark</b>
+    ... deploy or ...
+      <ul class="">
+	<li class="">Getting the architecture right is much more significant
+	than microoptimization.</li><!--FIXME mention where we saw
+	this in the course: fib (memo, psyco, iterative),
+	PriorityQueue ...-->
+	</ul>
+    </li>
+    <li class=""><b class="markblue">Profile</b>, recode hotspots in LLL, <b class="markgreen">benchmark</b>
+    ... deploy or ...</li>
+    <li class="">Recode everything in LLL, <b class="markgreen">benchmark</b> ...</li>
+    <li class="">CPU time is (increasingly) much cheaper than programmer time.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="slide" id="slide85" style="visibility: visible;">
+  <h1>I hope that</h1>
+  <ul class="">
+    <li class="">You are comfortable with writing functions and classes in
+    Python.</li>
+    <li class="">You know how to get online help (and do so).</li>
+    <li class="">You appreciate that the interactive, dynamic and
+    introspective nature of Python significantly helps the
+    development process.</li>
+    <li class="">You have learned at least one new programming technique or
+    concept.</li>
+    <li class="">You realize that you should not write Fortran, C++, Perl
+    etc. in Python.</li>
+    <li class="">You had some fun.</li>
+<!--FIXME meniton duck typing on this slide-->
+  </ul>
+</div>
+
+<!--FIXME ctypes-->
+
+<div class="slide" id="slide86" style="visibility: visible;">
+  <h1>Code samples</h1>
+  <ul>
+    <li><a href="https://jgcourses.gitlab.io/python-introduction/src/sortpass.py">Password file sorting</a></li>
+    <li><a href="https://jgcourses.gitlab.io/python-introduction/src/sumnumbers.py">Sum numbers on lines in file</a></li>
+    <li><a href="https://jgcourses.gitlab.io/python-introduction/src/fibonacci.py">Fibonacci implementations</a></li>
+    <li><a href="https://jgcourses.gitlab.io/python-introduction/src/memoize.py">Memoizer</a></li>
+    <li>
+      Priority queue <a href="https://jgcourses.gitlab.io/python-introduction/src/test-queue.py">test suite</a> and
+      <a href="https://jgcourses.gitlab.io/python-introduction/src/pqueue.py">implementation</a>
+    </li>
+    <li> 
+      Enumerate <a href="https://jgcourses.gitlab.io/python-introduction/src/test-enumerate.py"> test suite </a>
+      and <a href="https://jgcourses.gitlab.io/python-introduction/src/enumerate.py"> sample solutions</a>.
+    </li>
+    <li>
+      Decorator pattern in <a href="https://jgcourses.gitlab.io/python-introduction/src/decorator.py">Python</a>
+      and <a href="https://jgcourses.gitlab.io/python-introduction/src/decorator.cpp">C++</a>
+    </li>
+    <li>
+      State pattern in <a href="https://jgcourses.gitlab.io/python-introduction/src/state.py">Python</a>
+      and <a href="https://jgcourses.gitlab.io/python-introduction/src/state.cpp">C++</a>
+    </li>
+    <li><a href="https://jgcourses.gitlab.io/python-introduction/src/properties.py">Properties</a></li>
+  </ul>
+  <!--
+      fibonacci.cpp
+      seq_add.cpp
+      seq_add.py
+      fiblist.py
+      seqlist.py
+    -->
+</div>
+
+
+</div>
+
+
+
+<!--FIXME get the arrow keys to scroll in handout mode-->
+</body></html>

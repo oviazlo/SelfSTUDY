@@ -1,0 +1,60 @@
+first class object:
+1) store in variable
+2) store in the container
+3) pass as an argument
+4) return from function
+
+unqualified name lookup - search for binded object to a variable (search for variable)
+
+qualified name lookup - the same but in some namespace
+
+to figure out unqualified name lookup scheme use rule:
+LnGB: Local (nested), Global, Builtins
+* nested only applies for FUNCTIONs local scope
+
+# works, because there is no binding of "a" inside the function
+a = 1
+def fn():
+    print(a)
+fn()
+###
+
+# DOESN'T work, because there is no binding of "a" inside the function
+a = 1
+def fn():
+    print(a)
+    a = 9
+fn()
+###
+
+# WILL WORK: for doesn't have local scope!!!
+a = 1
+for b in 'abc':
+	print(a)
+	a+=1
+###
+
+python has two tyoes of arguments:
+- positional arguments
+- keyword arguments
+
+remove bindings:
+del a
+
+
+Signature: sorted(iterable, /, *, key=None, reverse=False)
+/ - before "/" are positional-only arguments (not available for use when writing your own functions)
+* - after "*" are keyword-only arguments (is implemented to be used when writing your own functions)
+
+
+"function is Currying" concept in Haskell
+
+
+module functools, function partial
+
+
+
+
+
+
+

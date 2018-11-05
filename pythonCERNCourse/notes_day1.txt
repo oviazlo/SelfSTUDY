@@ -1,0 +1,23 @@
+NameError usual cases:
+1) typo
+2) looking in the wrong namespace
+3) it's not there yet (module is not imported yet)
+
+READ documentation of <sys> module
+
+operation '==' compare elements of each object (as defined by operatio == in the class)
+operation 'is' compares id's of objects
+
+mutable - object can be changed
+immutable - object cannot be changed. if one try to modify an object, a new object will be created.
+
+doctest
+
+use iPython 
+
+Understand unexpected behaviour:
+b = [[0]*4]*4
+print(b)
+b[0][0] = 1
+print(b)
+

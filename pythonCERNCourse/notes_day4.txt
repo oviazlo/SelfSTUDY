@@ -1,0 +1,13 @@
+- ask recomendation for books about python
+- ask about advanced python course:
+	- what is the material covered there
+	- when will be the next one
+
+
+
+"turing completeness"
+
+
+website godball - comparison of compilers - CHECK IT!!!
+
+check decorators
