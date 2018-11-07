@@ -1,0 +1,6 @@
+https://us.pycon.org/
+- python conference
+- a lot of machine learning/data science with Python
+
+
+
