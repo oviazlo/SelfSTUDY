@@ -1,6 +1,26 @@
 https://us.pycon.org/
 - python conference
 - a lot of machine learning/data science with Python
-
+- video to watch from pycon2018 (https://us.pycon.org/2018/schedule/talks/list/):
+    - HOWTO Write a Function 
+    - Elegant Solutions For Everyday Python Problems 
+    - Big-O: How Code Slows as Data Grows 
+    - By the Numbers: Python Community Trends in 2017/2018 
+    - Automating Code Quality 
+    - Augmenting Human Decision Making with Data Science
+    - Beyond scraping: how to use machine learning when you're not sure where to start
+    - Beyond Unit Tests: Taking Your Testing to the Next Level 
+    - Data Visualization in Mixed Reality with Python 
+    - Exploring Deep Learning Framework PyTorch 
+    - Learning From Failure: Post Mortems 
+    - Love your bugs 
+    - One weird trick to becoming a better software developer 
+    - Python 2 to 3: How to Upgrade and What Features to Start Using 
+    - Python 3: ten years later 
+    - Solve Your Problem With Sloppy Python 
+    - Surviving (and thriving!) when you are overloaded 
+    - Type-checked Python in the real world 
+    - "WHAT IS THIS MESS?" - Writing tests for pre-existing code bases 
+    - You're an expert. Here's how to teach like one. 
 
 
