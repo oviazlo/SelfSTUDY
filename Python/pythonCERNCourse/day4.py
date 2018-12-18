@@ -1,6 +1,9 @@
 #list comprehension:
 [ x*x for x in range(10) ]
 #is
+
+
+
 list(map(lambda x:x*x, range(10)))
 
 # list comprehention
