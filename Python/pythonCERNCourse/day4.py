@@ -1,13 +1,12 @@
-#list comprehension:
-[ x*x for x in range(10) ]
-#is
+# list comprehension:
+[x*x for x in range(10)]
+# is
 
 
-
-list(map(lambda x:x*x, range(10)))
+list(map(lambda x: x*x, range(10)))
 
 # list comprehention
-[ (x,y) for x in range(6) if x%2 for y in range(6) if x>y ]
+[(x, y) for x in range(6) if x % 2 for y in range(6) if x > y]
 
 
 #r = [A for x in X if B for y in Y if C]
@@ -47,7 +46,7 @@ def gen_ints(start, stop):
         yield start
         start += 1
     return
-    
+
 a = gen_ints(3,6)
 for i in a: print(i)
 

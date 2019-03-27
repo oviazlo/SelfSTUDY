@@ -1,0 +1,14 @@
+Apache MXNet seminar
+- symbolic (define, compile, run) and imperative (define-by-run) ML programming
+    - https://mxnet.incubator.apache.org/versions/master/architecture/program_model.html
+- ONNX - open neural network interface (used by facebook, aws, etc.)
+- anomaly detection database
+- autoencoder
+- loss functions:
+    - L1, L2
+    - mean square sum
+    - structural similarity index
+- TVM (deep learning compiler stack)
+- edge device
+- GluonNVP, Gluon Model Zoo
+- discussion.mxnet
